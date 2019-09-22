@@ -1,0 +1,756 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		954CAD52DFAB64DDCFCB10C9 /* Pods_TabeebTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872373673875EDA209E3DDD2 /* Pods_TabeebTests.framework */; };
+		B0AE6B151F27266420D16EC6 /* Pods_Tabeeb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0DD668361197D6CF168697 /* Pods_Tabeeb.framework */; };
+		EEC2D566E223062B266C2F97 /* Pods_TabeebUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FCF1ACB7F5355C7EC35F60 /* Pods_TabeebUITests.framework */; };
+		FA1DE32E2334231D0018DB1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DE32D2334231D0018DB1C /* LoginViewController.swift */; };
+		FA1DE330233423390018DB1C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DE32F233423390018DB1C /* SignUpViewController.swift */; };
+		FA1DE3322334268F0018DB1C /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DE3312334268F0018DB1C /* Validator.swift */; };
+		FA1DE3342334276B0018DB1C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DE3332334276B0018DB1C /* Alert.swift */; };
+		FA1DE336233427C90018DB1C /* Extension+UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DE335233427C90018DB1C /* Extension+UIApplication.swift */; };
+		FA1DE33823342AE40018DB1C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA1DE33723342AE40018DB1C /* GoogleService-Info.plist */; };
+		FA1DE33A23342DBF0018DB1C /* FirebaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DE33923342DBF0018DB1C /* FirebaseServices.swift */; };
+		FA1DE33C23342F840018DB1C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DE33B23342F840018DB1C /* Result.swift */; };
+		FA3B8A262332B17D00A547E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B8A252332B17D00A547E0 /* AppDelegate.swift */; };
+		FA3B8A2D2332B17E00A547E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3B8A2C2332B17E00A547E0 /* Assets.xcassets */; };
+		FA3B8A302332B17E00A547E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3B8A2E2332B17E00A547E0 /* LaunchScreen.storyboard */; };
+		FA3B8A3B2332B17E00A547E0 /* TabeebTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B8A3A2332B17E00A547E0 /* TabeebTests.swift */; };
+		FA3B8A462332B17E00A547E0 /* TabeebUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B8A452332B17E00A547E0 /* TabeebUITests.swift */; };
+		FA3B8A542332B1C500A547E0 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3B8A532332B1C500A547E0 /* Authentication.storyboard */; };
+		FA3B8A562332B5C200A547E0 /* UnderLinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B8A552332B5C200A547E0 /* UnderLinedTextField.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA3B8A372332B17E00A547E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA3B8A1A2332B17D00A547E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA3B8A212332B17D00A547E0;
+			remoteInfo = Tabeeb;
+		};
+		FA3B8A422332B17E00A547E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA3B8A1A2332B17D00A547E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA3B8A212332B17D00A547E0;
+			remoteInfo = Tabeeb;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D27751758098B4F5AFA4DFA /* Pods-Tabeeb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tabeeb.debug.xcconfig"; path = "Target Support Files/Pods-Tabeeb/Pods-Tabeeb.debug.xcconfig"; sourceTree = "<group>"; };
+		6B921A1059FB348711270155 /* Pods-TabeebTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabeebTests.debug.xcconfig"; path = "Target Support Files/Pods-TabeebTests/Pods-TabeebTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D0DD668361197D6CF168697 /* Pods_Tabeeb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tabeeb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EC14BCE182DD497F2CC450B /* Pods-TabeebTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabeebTests.release.xcconfig"; path = "Target Support Files/Pods-TabeebTests/Pods-TabeebTests.release.xcconfig"; sourceTree = "<group>"; };
+		872373673875EDA209E3DDD2 /* Pods_TabeebTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabeebTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB0E835236319FE189A6977B /* Pods-TabeebUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabeebUITests.release.xcconfig"; path = "Target Support Files/Pods-TabeebUITests/Pods-TabeebUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B5804B583E3649976EEDFBB5 /* Pods-TabeebUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabeebUITests.debug.xcconfig"; path = "Target Support Files/Pods-TabeebUITests/Pods-TabeebUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D7FCF1ACB7F5355C7EC35F60 /* Pods_TabeebUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabeebUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD19A570BFBAB6A787E88CD8 /* Pods-Tabeeb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tabeeb.release.xcconfig"; path = "Target Support Files/Pods-Tabeeb/Pods-Tabeeb.release.xcconfig"; sourceTree = "<group>"; };
+		FA1DE32D2334231D0018DB1C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FA1DE32F233423390018DB1C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FA1DE3312334268F0018DB1C /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		FA1DE3332334276B0018DB1C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		FA1DE335233427C90018DB1C /* Extension+UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIApplication.swift"; sourceTree = "<group>"; };
+		FA1DE33723342AE40018DB1C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FA1DE33923342DBF0018DB1C /* FirebaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServices.swift; sourceTree = "<group>"; };
+		FA1DE33B23342F840018DB1C /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		FA3B8A222332B17D00A547E0 /* Tabeeb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tabeeb.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3B8A252332B17D00A547E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA3B8A2C2332B17E00A547E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA3B8A2F2332B17E00A547E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA3B8A312332B17E00A547E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA3B8A362332B17E00A547E0 /* TabeebTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabeebTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3B8A3A2332B17E00A547E0 /* TabeebTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabeebTests.swift; sourceTree = "<group>"; };
+		FA3B8A3C2332B17E00A547E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA3B8A412332B17E00A547E0 /* TabeebUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabeebUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3B8A452332B17E00A547E0 /* TabeebUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabeebUITests.swift; sourceTree = "<group>"; };
+		FA3B8A472332B17E00A547E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA3B8A532332B1C500A547E0 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		FA3B8A552332B5C200A547E0 /* UnderLinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLinedTextField.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA3B8A1F2332B17D00A547E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0AE6B151F27266420D16EC6 /* Pods_Tabeeb.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA3B8A332332B17E00A547E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				954CAD52DFAB64DDCFCB10C9 /* Pods_TabeebTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA3B8A3E2332B17E00A547E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEC2D566E223062B266C2F97 /* Pods_TabeebUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EB264FD462B5C00FC9E8D17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D27751758098B4F5AFA4DFA /* Pods-Tabeeb.debug.xcconfig */,
+				DD19A570BFBAB6A787E88CD8 /* Pods-Tabeeb.release.xcconfig */,
+				6B921A1059FB348711270155 /* Pods-TabeebTests.debug.xcconfig */,
+				6EC14BCE182DD497F2CC450B /* Pods-TabeebTests.release.xcconfig */,
+				B5804B583E3649976EEDFBB5 /* Pods-TabeebUITests.debug.xcconfig */,
+				AB0E835236319FE189A6977B /* Pods-TabeebUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		509DDE176511C30CDF310D22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D0DD668361197D6CF168697 /* Pods_Tabeeb.framework */,
+				872373673875EDA209E3DDD2 /* Pods_TabeebTests.framework */,
+				D7FCF1ACB7F5355C7EC35F60 /* Pods_TabeebUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA3B8A192332B17D00A547E0 = {
+			isa = PBXGroup;
+			children = (
+				FA3B8A242332B17D00A547E0 /* Tabeeb */,
+				FA3B8A392332B17E00A547E0 /* TabeebTests */,
+				FA3B8A442332B17E00A547E0 /* TabeebUITests */,
+				FA3B8A232332B17D00A547E0 /* Products */,
+				4EB264FD462B5C00FC9E8D17 /* Pods */,
+				509DDE176511C30CDF310D22 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA3B8A232332B17D00A547E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA3B8A222332B17D00A547E0 /* Tabeeb.app */,
+				FA3B8A362332B17E00A547E0 /* TabeebTests.xctest */,
+				FA3B8A412332B17E00A547E0 /* TabeebUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA3B8A242332B17D00A547E0 /* Tabeeb */ = {
+			isa = PBXGroup;
+			children = (
+				FA3B8A252332B17D00A547E0 /* AppDelegate.swift */,
+				FA3B8A532332B1C500A547E0 /* Authentication.storyboard */,
+				FA3B8A2C2332B17E00A547E0 /* Assets.xcassets */,
+				FA3B8A2E2332B17E00A547E0 /* LaunchScreen.storyboard */,
+				FA3B8A312332B17E00A547E0 /* Info.plist */,
+				FA1DE33723342AE40018DB1C /* GoogleService-Info.plist */,
+				FA3B8A552332B5C200A547E0 /* UnderLinedTextField.swift */,
+				FA1DE32D2334231D0018DB1C /* LoginViewController.swift */,
+				FA1DE32F233423390018DB1C /* SignUpViewController.swift */,
+				FA1DE335233427C90018DB1C /* Extension+UIApplication.swift */,
+				FA1DE3312334268F0018DB1C /* Validator.swift */,
+				FA1DE3332334276B0018DB1C /* Alert.swift */,
+				FA1DE33923342DBF0018DB1C /* FirebaseServices.swift */,
+				FA1DE33B23342F840018DB1C /* Result.swift */,
+			);
+			path = Tabeeb;
+			sourceTree = "<group>";
+		};
+		FA3B8A392332B17E00A547E0 /* TabeebTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA3B8A3A2332B17E00A547E0 /* TabeebTests.swift */,
+				FA3B8A3C2332B17E00A547E0 /* Info.plist */,
+			);
+			path = TabeebTests;
+			sourceTree = "<group>";
+		};
+		FA3B8A442332B17E00A547E0 /* TabeebUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA3B8A452332B17E00A547E0 /* TabeebUITests.swift */,
+				FA3B8A472332B17E00A547E0 /* Info.plist */,
+			);
+			path = TabeebUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA3B8A212332B17D00A547E0 /* Tabeeb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA3B8A4A2332B17E00A547E0 /* Build configuration list for PBXNativeTarget "Tabeeb" */;
+			buildPhases = (
+				DDEA3FC9F3A1D1F9E858ACE3 /* [CP] Check Pods Manifest.lock */,
+				FA3B8A1E2332B17D00A547E0 /* Sources */,
+				FA3B8A1F2332B17D00A547E0 /* Frameworks */,
+				FA3B8A202332B17D00A547E0 /* Resources */,
+				252109A18272D900532E300C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tabeeb;
+			productName = Tabeeb;
+			productReference = FA3B8A222332B17D00A547E0 /* Tabeeb.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA3B8A352332B17E00A547E0 /* TabeebTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA3B8A4D2332B17E00A547E0 /* Build configuration list for PBXNativeTarget "TabeebTests" */;
+			buildPhases = (
+				0A5B4F40A7356BEBB31DA69F /* [CP] Check Pods Manifest.lock */,
+				FA3B8A322332B17E00A547E0 /* Sources */,
+				FA3B8A332332B17E00A547E0 /* Frameworks */,
+				FA3B8A342332B17E00A547E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA3B8A382332B17E00A547E0 /* PBXTargetDependency */,
+			);
+			name = TabeebTests;
+			productName = TabeebTests;
+			productReference = FA3B8A362332B17E00A547E0 /* TabeebTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA3B8A402332B17E00A547E0 /* TabeebUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA3B8A502332B17E00A547E0 /* Build configuration list for PBXNativeTarget "TabeebUITests" */;
+			buildPhases = (
+				4DA1F99DF65E7E2FF1E6153D /* [CP] Check Pods Manifest.lock */,
+				FA3B8A3D2332B17E00A547E0 /* Sources */,
+				FA3B8A3E2332B17E00A547E0 /* Frameworks */,
+				FA3B8A3F2332B17E00A547E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA3B8A432332B17E00A547E0 /* PBXTargetDependency */,
+			);
+			name = TabeebUITests;
+			productName = TabeebUITests;
+			productReference = FA3B8A412332B17E00A547E0 /* TabeebUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA3B8A1A2332B17D00A547E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = SZABIST;
+				TargetAttributes = {
+					FA3B8A212332B17D00A547E0 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					FA3B8A352332B17E00A547E0 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = FA3B8A212332B17D00A547E0;
+					};
+					FA3B8A402332B17E00A547E0 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = FA3B8A212332B17D00A547E0;
+					};
+				};
+			};
+			buildConfigurationList = FA3B8A1D2332B17D00A547E0 /* Build configuration list for PBXProject "Tabeeb" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA3B8A192332B17D00A547E0;
+			productRefGroup = FA3B8A232332B17D00A547E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA3B8A212332B17D00A547E0 /* Tabeeb */,
+				FA3B8A352332B17E00A547E0 /* TabeebTests */,
+				FA3B8A402332B17E00A547E0 /* TabeebUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA3B8A202332B17D00A547E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA3B8A542332B1C500A547E0 /* Authentication.storyboard in Resources */,
+				FA1DE33823342AE40018DB1C /* GoogleService-Info.plist in Resources */,
+				FA3B8A302332B17E00A547E0 /* LaunchScreen.storyboard in Resources */,
+				FA3B8A2D2332B17E00A547E0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA3B8A342332B17E00A547E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA3B8A3F2332B17E00A547E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A5B4F40A7356BEBB31DA69F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TabeebTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		252109A18272D900532E300C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tabeeb/Pods-Tabeeb-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tabeeb/Pods-Tabeeb-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DA1F99DF65E7E2FF1E6153D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TabeebUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDEA3FC9F3A1D1F9E858ACE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tabeeb-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA3B8A1E2332B17D00A547E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1DE33C23342F840018DB1C /* Result.swift in Sources */,
+				FA1DE3342334276B0018DB1C /* Alert.swift in Sources */,
+				FA1DE32E2334231D0018DB1C /* LoginViewController.swift in Sources */,
+				FA3B8A262332B17D00A547E0 /* AppDelegate.swift in Sources */,
+				FA1DE3322334268F0018DB1C /* Validator.swift in Sources */,
+				FA1DE330233423390018DB1C /* SignUpViewController.swift in Sources */,
+				FA1DE336233427C90018DB1C /* Extension+UIApplication.swift in Sources */,
+				FA1DE33A23342DBF0018DB1C /* FirebaseServices.swift in Sources */,
+				FA3B8A562332B5C200A547E0 /* UnderLinedTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA3B8A322332B17E00A547E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA3B8A3B2332B17E00A547E0 /* TabeebTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA3B8A3D2332B17E00A547E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA3B8A462332B17E00A547E0 /* TabeebUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA3B8A382332B17E00A547E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA3B8A212332B17D00A547E0 /* Tabeeb */;
+			targetProxy = FA3B8A372332B17E00A547E0 /* PBXContainerItemProxy */;
+		};
+		FA3B8A432332B17E00A547E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA3B8A212332B17D00A547E0 /* Tabeeb */;
+			targetProxy = FA3B8A422332B17E00A547E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA3B8A2E2332B17E00A547E0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA3B8A2F2332B17E00A547E0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA3B8A482332B17E00A547E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA3B8A492332B17E00A547E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA3B8A4B2332B17E00A547E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D27751758098B4F5AFA4DFA /* Pods-Tabeeb.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tabeeb/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SZABIST.Tabeeb;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FA3B8A4C2332B17E00A547E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD19A570BFBAB6A787E88CD8 /* Pods-Tabeeb.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tabeeb/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SZABIST.Tabeeb;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		FA3B8A4E2332B17E00A547E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B921A1059FB348711270155 /* Pods-TabeebTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TabeebTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SZABIST.TabeebTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tabeeb.app/Tabeeb";
+			};
+			name = Debug;
+		};
+		FA3B8A4F2332B17E00A547E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EC14BCE182DD497F2CC450B /* Pods-TabeebTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TabeebTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SZABIST.TabeebTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tabeeb.app/Tabeeb";
+			};
+			name = Release;
+		};
+		FA3B8A512332B17E00A547E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5804B583E3649976EEDFBB5 /* Pods-TabeebUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TabeebUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SZABIST.TabeebUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tabeeb;
+			};
+			name = Debug;
+		};
+		FA3B8A522332B17E00A547E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB0E835236319FE189A6977B /* Pods-TabeebUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TabeebUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SZABIST.TabeebUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tabeeb;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA3B8A1D2332B17D00A547E0 /* Build configuration list for PBXProject "Tabeeb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA3B8A482332B17E00A547E0 /* Debug */,
+				FA3B8A492332B17E00A547E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA3B8A4A2332B17E00A547E0 /* Build configuration list for PBXNativeTarget "Tabeeb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA3B8A4B2332B17E00A547E0 /* Debug */,
+				FA3B8A4C2332B17E00A547E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA3B8A4D2332B17E00A547E0 /* Build configuration list for PBXNativeTarget "TabeebTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA3B8A4E2332B17E00A547E0 /* Debug */,
+				FA3B8A4F2332B17E00A547E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA3B8A502332B17E00A547E0 /* Build configuration list for PBXNativeTarget "TabeebUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA3B8A512332B17E00A547E0 /* Debug */,
+				FA3B8A522332B17E00A547E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA3B8A1A2332B17D00A547E0 /* Project object */;
+}

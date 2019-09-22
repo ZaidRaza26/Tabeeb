@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>451451256613-r9jbc0q63pebspc05st1sj1f48o97lba.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.451451256613-r9jbc0q63pebspc05st1sj1f48o97lba</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB0joUodE39k_eGsAOjdc8mNlYZdEbB6Ug</string>
+	<key>GCM_SENDER_ID</key>
+	<string>451451256613</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>SZABIST.Tabeeb</string>
+	<key>PROJECT_ID</key>
+	<string>tabeeb-1f615</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tabeeb-1f615.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:451451256613:ios:7d4035012e264cd25ae4cc</string>
+	<key>DATABASE_URL</key>
+	<string>https://tabeeb-1f615.firebaseio.com</string>
+</dict>
+</plist>
