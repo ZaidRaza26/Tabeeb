@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="hYT-ZM-icL">
             <objects>
-                <viewController id="Mn4-C5-xph" sceneMemberID="viewController">
+                <viewController id="Mn4-C5-xph" customClass="LoginViewController" customModule="Tabeeb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iIj-3z-x6x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,6 +94,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="16"/>
                                                 <state key="normal" title="Login"/>
+                                                <connections>
+                                                    <action selector="loginTapped:" destination="Mn4-C5-xph" eventType="touchUpInside" id="qeZ-fH-00z"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYA-cX-gvq">
                                                 <rect key="frame" x="78" y="553" width="219" height="30"/>
@@ -149,6 +152,10 @@
                         <viewLayoutGuide key="safeArea" id="kZG-gj-PA7"/>
                     </view>
                     <navigationItem key="navigationItem" id="Jh3-v2-asd"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="VUT-uG-wVF" id="Xop-ih-Hcw"/>
+                        <outlet property="passwordTextField" destination="ORT-eZ-B6H" id="zlF-C7-otq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGK-IK-OEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -233,7 +240,7 @@
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="DATE OF BIRTH" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iaI-Yl-ccZ" customClass="UnderLinedTextField" customModule="Tabeeb" customModuleProvider="target">
                                                 <rect key="frame" x="50" y="340" width="275" height="40"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>

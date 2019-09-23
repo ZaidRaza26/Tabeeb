@@ -9,22 +9,36 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    @IBOutlet weak var emailTextField: UnderLinedTextField!
+    
+    @IBOutlet weak var passwordTextField: UnderLinedTextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func loginTapped(_ sender: UIButton) {
+        do{
+            try Validator.validateEmptyTextFields(textFields: [emailTextField,passwordTextField])
+            try Validator.validateEmail(textField: emailTextField)
+            try Validator.validatePasswordTextField(textField: passwordTextField)
+            FirebaseServices.login(email: emailTextField.text!, password: passwordTextField.text!) { (result) in
+                switch result {
+                case .success(_):
+                    print("Signedin Successfully")
+                case .failure(let message):
+                    print(message)
+                    Alert.show(message: message)
+                }
+            }
+        }
+        catch{
+            let _error = error as! FieldError
+            Alert.show(message: _error.localizedDescription)
+        }
     }
-    */
-
 }
+

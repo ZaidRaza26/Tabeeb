@@ -10,6 +10,9 @@
 		954CAD52DFAB64DDCFCB10C9 /* Pods_TabeebTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872373673875EDA209E3DDD2 /* Pods_TabeebTests.framework */; };
 		B0AE6B151F27266420D16EC6 /* Pods_Tabeeb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0DD668361197D6CF168697 /* Pods_Tabeeb.framework */; };
 		EEC2D566E223062B266C2F97 /* Pods_TabeebUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FCF1ACB7F5355C7EC35F60 /* Pods_TabeebUITests.framework */; };
+		FA10259023394B920034EAD4 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10258F23394B920034EAD4 /* Extension+Date.swift */; };
+		FA10259223394C810034EAD4 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10259123394C800034EAD4 /* Extension+UIViewController.swift */; };
+		FA10259423394C910034EAD4 /* Extension+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10259323394C910034EAD4 /* Extension+UIScrollView.swift */; };
 		FA1DE32E2334231D0018DB1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DE32D2334231D0018DB1C /* LoginViewController.swift */; };
 		FA1DE330233423390018DB1C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DE32F233423390018DB1C /* SignUpViewController.swift */; };
 		FA1DE3322334268F0018DB1C /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DE3312334268F0018DB1C /* Validator.swift */; };
@@ -54,6 +57,9 @@
 		B5804B583E3649976EEDFBB5 /* Pods-TabeebUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabeebUITests.debug.xcconfig"; path = "Target Support Files/Pods-TabeebUITests/Pods-TabeebUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7FCF1ACB7F5355C7EC35F60 /* Pods_TabeebUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabeebUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD19A570BFBAB6A787E88CD8 /* Pods-Tabeeb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tabeeb.release.xcconfig"; path = "Target Support Files/Pods-Tabeeb/Pods-Tabeeb.release.xcconfig"; sourceTree = "<group>"; };
+		FA10258F23394B920034EAD4 /* Extension+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
+		FA10259123394C800034EAD4 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		FA10259323394C910034EAD4 /* Extension+UIScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIScrollView.swift"; sourceTree = "<group>"; };
 		FA1DE32D2334231D0018DB1C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FA1DE32F233423390018DB1C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FA1DE3312334268F0018DB1C /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
@@ -163,6 +169,9 @@
 				FA1DE32D2334231D0018DB1C /* LoginViewController.swift */,
 				FA1DE32F233423390018DB1C /* SignUpViewController.swift */,
 				FA1DE335233427C90018DB1C /* Extension+UIApplication.swift */,
+				FA10259123394C800034EAD4 /* Extension+UIViewController.swift */,
+				FA10259323394C910034EAD4 /* Extension+UIScrollView.swift */,
+				FA10258F23394B920034EAD4 /* Extension+Date.swift */,
 				FA1DE3312334268F0018DB1C /* Validator.swift */,
 				FA1DE3332334276B0018DB1C /* Alert.swift */,
 				FA1DE33923342DBF0018DB1C /* FirebaseServices.swift */,
@@ -354,6 +363,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Tabeeb/Pods-Tabeeb-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -362,6 +372,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,7 +439,10 @@
 				FA1DE330233423390018DB1C /* SignUpViewController.swift in Sources */,
 				FA1DE336233427C90018DB1C /* Extension+UIApplication.swift in Sources */,
 				FA1DE33A23342DBF0018DB1C /* FirebaseServices.swift in Sources */,
+				FA10259223394C810034EAD4 /* Extension+UIViewController.swift in Sources */,
 				FA3B8A562332B5C200A547E0 /* UnderLinedTextField.swift in Sources */,
+				FA10259023394B920034EAD4 /* Extension+Date.swift in Sources */,
+				FA10259423394C910034EAD4 /* Extension+UIScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
