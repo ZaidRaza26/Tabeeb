@@ -44,7 +44,6 @@ class SignUpViewController: UIViewController {
                 switch result {
                 case .success(_):
                     print("Signed Up Successfully")
-                    
                 case .failure(let message):
                     print("Signing up Failed")
                     Alert.show(message: message)

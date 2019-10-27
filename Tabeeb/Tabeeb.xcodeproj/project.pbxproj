@@ -13,6 +13,7 @@
 		FA10259023394B920034EAD4 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10258F23394B920034EAD4 /* Extension+Date.swift */; };
 		FA10259223394C810034EAD4 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10259123394C800034EAD4 /* Extension+UIViewController.swift */; };
 		FA10259423394C910034EAD4 /* Extension+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10259323394C910034EAD4 /* Extension+UIScrollView.swift */; };
+		FA10259623395E7F0034EAD4 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA10259523395E7F0034EAD4 /* Home.storyboard */; };
 		FA1DE32E2334231D0018DB1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DE32D2334231D0018DB1C /* LoginViewController.swift */; };
 		FA1DE330233423390018DB1C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DE32F233423390018DB1C /* SignUpViewController.swift */; };
 		FA1DE3322334268F0018DB1C /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DE3312334268F0018DB1C /* Validator.swift */; };
@@ -28,6 +29,7 @@
 		FA3B8A462332B17E00A547E0 /* TabeebUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B8A452332B17E00A547E0 /* TabeebUITests.swift */; };
 		FA3B8A542332B1C500A547E0 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3B8A532332B1C500A547E0 /* Authentication.storyboard */; };
 		FA3B8A562332B5C200A547E0 /* UnderLinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B8A552332B5C200A547E0 /* UnderLinedTextField.swift */; };
+		FAB9FD2E23661E4900235FE8 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9FD2D23661E4900235FE8 /* CurrentUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,7 @@
 		FA10258F23394B920034EAD4 /* Extension+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		FA10259123394C800034EAD4 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
 		FA10259323394C910034EAD4 /* Extension+UIScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIScrollView.swift"; sourceTree = "<group>"; };
+		FA10259523395E7F0034EAD4 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		FA1DE32D2334231D0018DB1C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FA1DE32F233423390018DB1C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FA1DE3312334268F0018DB1C /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 		FA3B8A472332B17E00A547E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA3B8A532332B1C500A547E0 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		FA3B8A552332B5C200A547E0 /* UnderLinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLinedTextField.swift; sourceTree = "<group>"; };
+		FAB9FD2D23661E4900235FE8 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,11 +175,13 @@
 				FA1DE335233427C90018DB1C /* Extension+UIApplication.swift */,
 				FA10259123394C800034EAD4 /* Extension+UIViewController.swift */,
 				FA10259323394C910034EAD4 /* Extension+UIScrollView.swift */,
+				FAB9FD2D23661E4900235FE8 /* CurrentUser.swift */,
 				FA10258F23394B920034EAD4 /* Extension+Date.swift */,
 				FA1DE3312334268F0018DB1C /* Validator.swift */,
 				FA1DE3332334276B0018DB1C /* Alert.swift */,
 				FA1DE33923342DBF0018DB1C /* FirebaseServices.swift */,
 				FA1DE33B23342F840018DB1C /* Result.swift */,
+				FA10259523395E7F0034EAD4 /* Home.storyboard */,
 			);
 			path = Tabeeb;
 			sourceTree = "<group>";
@@ -209,7 +215,7 @@
 				FA3B8A1E2332B17D00A547E0 /* Sources */,
 				FA3B8A1F2332B17D00A547E0 /* Frameworks */,
 				FA3B8A202332B17D00A547E0 /* Resources */,
-				252109A18272D900532E300C /* [CP] Embed Pods Frameworks */,
+				F7302A8BD14137DC008C3004 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -307,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA3B8A542332B1C500A547E0 /* Authentication.storyboard in Resources */,
+				FA10259623395E7F0034EAD4 /* Home.storyboard in Resources */,
 				FA1DE33823342AE40018DB1C /* GoogleService-Info.plist in Resources */,
 				FA3B8A302332B17E00A547E0 /* LaunchScreen.storyboard in Resources */,
 				FA3B8A2D2332B17E00A547E0 /* Assets.xcassets in Resources */,
@@ -350,34 +357,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		252109A18272D900532E300C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tabeeb/Pods-Tabeeb-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tabeeb/Pods-Tabeeb-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4DA1F99DF65E7E2FF1E6153D /* [CP] Check Pods Manifest.lock */ = {
@@ -424,6 +403,42 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F7302A8BD14137DC008C3004 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tabeeb/Pods-Tabeeb-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tabeeb/Pods-Tabeeb-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -443,6 +458,7 @@
 				FA3B8A562332B5C200A547E0 /* UnderLinedTextField.swift in Sources */,
 				FA10259023394B920034EAD4 /* Extension+Date.swift in Sources */,
 				FA10259423394C910034EAD4 /* Extension+UIScrollView.swift in Sources */,
+				FAB9FD2E23661E4900235FE8 /* CurrentUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
