@@ -44,6 +44,9 @@ class SignUpViewController: UIViewController {
                 switch result {
                 case .success(_):
                     print("Signed Up Successfully")
+                    let homeSB = UIStoryboard(name: "Home", bundle: nil)
+                    let homeVC = homeSB.instantiateInitialViewController()
+                    RouteManager.shared.show(homeVC!)
                 case .failure(let message):
                     print("Signing up Failed")
                     Alert.show(message: message)

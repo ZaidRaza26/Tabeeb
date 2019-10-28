@@ -14,5 +14,5 @@ class CurrentUser:Codable{
     let email:String
     let dob:String
     
-    static var shared:CurrentUser?
+    static var shared:CurrentUser!
 }

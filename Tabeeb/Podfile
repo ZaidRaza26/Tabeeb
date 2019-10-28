@@ -8,6 +8,8 @@ target 'Tabeeb' do
   # Pods for Tabeeb
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'MessageKit'
+
 
   target 'TabeebTests' do
     inherit! :search_paths

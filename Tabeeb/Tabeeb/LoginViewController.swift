@@ -29,6 +29,9 @@ class LoginViewController: UIViewController {
                 switch result {
                 case .success(_):
                     print("Signedin Successfully")
+                    let homeSB = UIStoryboard(name: "Home", bundle: nil)
+                    let homeVC = homeSB.instantiateInitialViewController()
+                    RouteManager.shared.show(homeVC!)
                 case .failure(let message):
                     print(message)
                     Alert.show(message: message)

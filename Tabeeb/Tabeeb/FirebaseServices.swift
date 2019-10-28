@@ -54,6 +54,7 @@ class FirebaseServices{
                     }else if let snapshot = snapshot, let dict = snapshot.data(){
                         do{
                             CurrentUser.shared = try decode(with: dict)
+                            completion(.success(true))
                         }catch{
                             completion(.failure(error.localizedDescription))
                         }
