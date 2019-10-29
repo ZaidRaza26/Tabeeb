@@ -10,6 +10,8 @@
 		954CAD52DFAB64DDCFCB10C9 /* Pods_TabeebTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872373673875EDA209E3DDD2 /* Pods_TabeebTests.framework */; };
 		B0AE6B151F27266420D16EC6 /* Pods_Tabeeb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0DD668361197D6CF168697 /* Pods_Tabeeb.framework */; };
 		EEC2D566E223062B266C2F97 /* Pods_TabeebUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FCF1ACB7F5355C7EC35F60 /* Pods_TabeebUITests.framework */; };
+		FA0219A22368D6F90093B55E /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0219A12368D6F90093B55E /* ShadowView.swift */; };
+		FA0219A42368DDA50093B55E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0219A32368DDA50093B55E /* HomeViewController.swift */; };
 		FA10259023394B920034EAD4 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10258F23394B920034EAD4 /* Extension+Date.swift */; };
 		FA10259223394C810034EAD4 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10259123394C800034EAD4 /* Extension+UIViewController.swift */; };
 		FA10259423394C910034EAD4 /* Extension+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10259323394C910034EAD4 /* Extension+UIScrollView.swift */; };
@@ -68,6 +70,8 @@
 		B5804B583E3649976EEDFBB5 /* Pods-TabeebUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabeebUITests.debug.xcconfig"; path = "Target Support Files/Pods-TabeebUITests/Pods-TabeebUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7FCF1ACB7F5355C7EC35F60 /* Pods_TabeebUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabeebUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD19A570BFBAB6A787E88CD8 /* Pods-Tabeeb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tabeeb.release.xcconfig"; path = "Target Support Files/Pods-Tabeeb/Pods-Tabeeb.release.xcconfig"; sourceTree = "<group>"; };
+		FA0219A12368D6F90093B55E /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		FA0219A32368DDA50093B55E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA10258F23394B920034EAD4 /* Extension+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		FA10259123394C800034EAD4 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
 		FA10259323394C910034EAD4 /* Extension+UIScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIScrollView.swift"; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 				FA1DE33923342DBF0018DB1C /* FirebaseServices.swift */,
 				FA1DE33B23342F840018DB1C /* Result.swift */,
 				FA10259523395E7F0034EAD4 /* Home.storyboard */,
+				FA0219A12368D6F90093B55E /* ShadowView.swift */,
 				FAB9FD2F2366268100235FE8 /* ConversationsViewController.swift */,
 				FAB9FD31236628FD00235FE8 /* ConsultViewController.swift */,
 				FAB9FD3323662E5500235FE8 /* RouteManager.swift */,
@@ -209,6 +214,7 @@
 				FA7C138E23678FB7005AB2BD /* ConversationTableViewCell.swift */,
 				FA7C1390236795E4005AB2BD /* ChatViewController.swift */,
 				FA7C1392236799A3005AB2BD /* Message.swift */,
+				FA0219A32368DDA50093B55E /* HomeViewController.swift */,
 			);
 			path = Tabeeb;
 			sourceTree = "<group>";
@@ -445,6 +451,7 @@
 				"${BUILT_PRODUCTS_DIR}/InputBarAccessoryView/InputBarAccessoryView.framework",
 				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -460,6 +467,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputBarAccessoryView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -488,8 +496,10 @@
 				FAB9FD36236636BE00235FE8 /* Doctor.swift in Sources */,
 				FAB9FD3423662E5500235FE8 /* RouteManager.swift in Sources */,
 				FA7C1391236795E4005AB2BD /* ChatViewController.swift in Sources */,
+				FA0219A42368DDA50093B55E /* HomeViewController.swift in Sources */,
 				FA1DE336233427C90018DB1C /* Extension+UIApplication.swift in Sources */,
 				FAB9FD3A23664CD300235FE8 /* Conversation.swift in Sources */,
+				FA0219A22368D6F90093B55E /* ShadowView.swift in Sources */,
 				FAB9FD3823663B9C00235FE8 /* ConsultTableViewCell.swift in Sources */,
 				FA1DE33A23342DBF0018DB1C /* FirebaseServices.swift in Sources */,
 				FA10259223394C810034EAD4 /* Extension+UIViewController.swift in Sources */,

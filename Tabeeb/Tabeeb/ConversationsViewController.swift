@@ -31,12 +31,15 @@ class ConversationsViewController: UIViewController {
         Firestore.firestore().collection("doctors-patients").document(CurrentUser.shared.id).addSnapshotListener { (snapshot, error) in
             if let dict = snapshot?.data(), let doctorID = dict.keys.first{
                 let conversationID = dict[doctorID] as! String
-                Firestore.firestore().collection("conversations").document(conversationID).getDocument(completion: { (snapshot, error) in
+                Firestore.firestore().collection("conversations").document(conversationID).addSnapshotListener({ (snapshot, error) in
                     if let snapshot = snapshot, var dict = snapshot.data(){
                         dict["id"] = snapshot.documentID
-                        //dict["timestamp"] = dict["timestamp"] as! Double
                         let conversation:Conversation = try! decode(with: dict)
-                        self.conversations.insert(conversation, at: 0)
+                        if let index = self.conversations.firstIndex(where: {$0.id == conversation.id}){
+                            self.conversations[index] = conversation
+                        }else{
+                            self.conversations.insert(conversation, at: 0)
+                        }
                         self.tableView.reloadData()
                     }
                 })

@@ -20,7 +20,12 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
         super.viewDidLoad()
         configureMessageCollectionView()
         configureMessageInputBar()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         getMessages()
+
     }
     
     func configureMessageCollectionView() {
@@ -33,6 +38,9 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
         }
         scrollsToBottomOnKeyboardBeginsEditing = true // default false
         maintainPositionOnKeyboardFrameChanged = true // default false
+        messagesCollectionView.messagesDataSource = self
+        messagesCollectionView.messagesLayoutDelegate = self
+        messagesCollectionView.messagesDisplayDelegate = self
     }
     
     func configureMessageInputBar() {
@@ -93,12 +101,23 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
         Firestore.firestore().collection("conversations").document(conversation.id).collection("messages").addDocument(data: ["text" :text,
                                                                                                                               "senderID" : CurrentUser.shared.id,
                                                                                                                               "timestamp" : Date().timeIntervalSince1970])
+        Firestore.firestore().collection("conversations").document(conversation.id).updateData(["lastMessage": text,
+                                                                                                "timestamp": Date().timeIntervalSince1970])
     }
     
     func getMessages(){
-        Firestore.firestore().collection("conversations").document(conversation.id).collection("messages").addSnapshotListener { (snapshot, error) in
-            for document in snapshot?.documents ?? []{
-                print(document.data())
+        Firestore.firestore().collection("conversations").document(conversation.id).collection("messages").order(by: "timestamp", descending: false).addSnapshotListener { (snapshot, error) in
+            for change in snapshot?.documentChanges ?? []{
+                if change.type == DocumentChangeType.added{
+                    let id = change.document.documentID
+                    var dict = change.document.data()
+                    dict["id"] = id
+                    let message:Message = try! decode(with: dict)
+                    self.messages.append(message)
+                    self.messagesCollectionView.reloadData()
+                    self.messagesCollectionView.scrollToBottom()
+                }
+                
             }
             
         }

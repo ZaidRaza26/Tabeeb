@@ -9,6 +9,7 @@ target 'Tabeeb' do
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'MessageKit'
+pod 'UICircularProgressRing'
 
 
   target 'TabeebTests' do

@@ -17,7 +17,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        emailTextField.text = "zaidraza1@gmail.com"
+        passwordTextField.text = "zaidraza"
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
