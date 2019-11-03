@@ -10,6 +10,8 @@ pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'MessageKit'
 pod 'UICircularProgressRing'
+pod 'JGProgressHUD'
+
 
 
   target 'TabeebTests' do

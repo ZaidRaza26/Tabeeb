@@ -40,14 +40,17 @@ class SignUpViewController: UIViewController {
             try Validator.validateEmail(textField: emailTextField)
             try Validator.validatePasswordTextField(textField: passwordTextField)
             try Validator.confirmPasswordTextFields(textField: passwordTextField, confirmTextField: confirmPasswordTextField)
+            UIApplication.startActivityIndicator()
             FirebaseServices.signUp(name: nameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, dob: dobTextField.text!) { (result) in
                 switch result {
                 case .success(_):
+                    UIApplication.stopActivityIndicator()
                     print("Signed Up Successfully")
                     let homeSB = UIStoryboard(name: "Home", bundle: nil)
                     let homeVC = homeSB.instantiateInitialViewController()
                     RouteManager.shared.show(homeVC!)
                 case .failure(let message):
+                    UIApplication.stopActivityIndicator()
                     print("Signing up Failed")
                     Alert.show(message: message)
                 }

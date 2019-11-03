@@ -6,7 +6,7 @@
 //  Copyright © 2019 SZABIST. All rights reserved.
 //
 
-
+import JGProgressHUD
 import UIKit
 extension UIApplication {
     class func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) ->
@@ -23,5 +23,25 @@ extension UIApplication {
                 return topViewController(controller: presented)
             }
             return controller!
+    }
+}
+
+
+extension UIApplication{
+    //Show hide loader.
+    class func startActivityIndicator(with message: String? = "") {
+        let hud = JGProgressHUD(style: .dark)
+        hud.tag = 999
+        hud.textLabel.text = message
+        if let view = self.shared.keyWindow {
+            hud.show(in: view)
+        }
+    }
+    
+    class func stopActivityIndicator(){
+        if let hud = self.shared.keyWindow?.viewWithTag(999) as? JGProgressHUD {
+            hud.dismiss()
+            hud.removeFromSuperview()
+        }
     }
 }

@@ -19,7 +19,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Conversations View Controller-->
+        <!--Conversations-->
         <scene sceneID="prC-8p-MN5">
             <objects>
                 <viewController id="cAU-Xi-XeY" customClass="ConversationsViewController" customModule="Tabeeb" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,7 +39,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KfV-hc-iV8">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctor" translatesAutoresizingMaskIntoConstraints="NO" id="KfV-hc-iV8">
                                                     <rect key="frame" x="20" y="20" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="EQN-1F-cnG"/>
@@ -104,7 +104,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ftf-aL-e4y"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7cJ-Sr-Sos">
+                    <navigationItem key="navigationItem" title="Conversations" id="7cJ-Sr-Sos">
                         <barButtonItem key="rightBarButtonItem" title="Consult" id="gqT-aK-Fgy">
                             <connections>
                                 <action selector="consultTapped:" destination="cAU-Xi-XeY" id="314-4X-FY5"/>
@@ -147,6 +147,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0gX-xG-gj4">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="140" id="Udd-za-aWt" customClass="ConsultTableViewCell" customModule="Tabeeb" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="140"/>
@@ -155,7 +156,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FFP-Jy-oNR">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctor" translatesAutoresizingMaskIntoConstraints="NO" id="FFP-Jy-oNR">
                                                     <rect key="frame" x="20" y="20" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="le7-E3-UKm"/>
@@ -228,7 +229,7 @@
             </objects>
             <point key="canvasLocation" x="1805" y="227"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="Zzm-nk-JAb">
             <objects>
                 <viewController id="F1B-mo-Xca" customClass="HomeViewController" customModule="Tabeeb" customModuleProvider="target" sceneMemberID="viewController">
@@ -645,7 +646,7 @@ Cg
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T2E-e3-FJs"/>
                     </view>
-                    <navigationItem key="navigationItem" id="gsh-T2-ztu"/>
+                    <navigationItem key="navigationItem" title="Home" id="gsh-T2-ztu"/>
                     <connections>
                         <outlet property="collectionView" destination="9x7-3J-9H3" id="j0v-zx-FIU"/>
                     </connections>
@@ -676,7 +677,7 @@ Cg
         <scene sceneID="zPv-e1-gcc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uzV-dq-5xB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="zlu-BJ-4JQ"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home_icon" id="zlu-BJ-4JQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="daQ-Ad-YR1">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -695,7 +696,7 @@ Cg
         <scene sceneID="0xR-t8-e2Z">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gsF-jV-Kmf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Consult" id="9ja-rC-NPd"/>
+                    <tabBarItem key="tabBarItem" title="Consult" image="consult_icon" id="9ja-rC-NPd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Z56-ir-s3H">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -714,6 +715,9 @@ Cg
     <resources>
         <image name="SnoozeUnselectedWhite" width="16" height="16"/>
         <image name="TakenUnselectedWhite" width="16" height="16"/>
+        <image name="consult_icon" width="24" height="24"/>
+        <image name="doctor" width="225" height="225"/>
+        <image name="home_icon" width="24" height="24"/>
         <namedColor name="PrimaryColor">
             <color red="0.17647058823529413" green="0.23921568627450981" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

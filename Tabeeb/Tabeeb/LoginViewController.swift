@@ -26,14 +26,17 @@ class LoginViewController: UIViewController {
             try Validator.validateEmptyTextFields(textFields: [emailTextField,passwordTextField])
             try Validator.validateEmail(textField: emailTextField)
             try Validator.validatePasswordTextField(textField: passwordTextField)
+            UIApplication.startActivityIndicator()
             FirebaseServices.login(email: emailTextField.text!, password: passwordTextField.text!) { (result) in
-                switch result {
+              switch result {
                 case .success(_):
+                    UIApplication.stopActivityIndicator()
                     print("Signedin Successfully")
                     let homeSB = UIStoryboard(name: "Home", bundle: nil)
                     let homeVC = homeSB.instantiateInitialViewController()
                     RouteManager.shared.show(homeVC!)
                 case .failure(let message):
+                    UIApplication.stopActivityIndicator()
                     print(message)
                     Alert.show(message: message)
                 }
