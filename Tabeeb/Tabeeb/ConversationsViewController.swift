@@ -29,21 +29,26 @@ class ConversationsViewController: UIViewController {
     
     func getConversations(){
         Firestore.firestore().collection("doctors-patients").document(CurrentUser.shared.id).addSnapshotListener { (snapshot, error) in
-            if let dict = snapshot?.data(), let doctorID = dict.keys.first{
-                let conversationID = dict[doctorID] as! String
-                Firestore.firestore().collection("conversations").document(conversationID).addSnapshotListener({ (snapshot, error) in
-                    if let snapshot = snapshot, var dict = snapshot.data(){
-                        dict["id"] = snapshot.documentID
-                        let conversation:Conversation = try! decode(with: dict)
-                        if let index = self.conversations.firstIndex(where: {$0.id == conversation.id}){
-                            self.conversations[index] = conversation
-                        }else{
-                            self.conversations.insert(conversation, at: 0)
+            
+            for data in snapshot?.data() ?? [:]{
+                if let conversationID = data.value as? String{
+                    //let conversationID = dict[data.value] as! String
+                    Firestore.firestore().collection("conversations").document(conversationID).getDocument(completion: { (snapshot, error) in
+                        if let snapshot = snapshot, var dict = snapshot.data(){
+                            dict["id"] = snapshot.documentID
+                            let conversation:Conversation = try! decode(with: dict)
+                            if let index = self.conversations.firstIndex(where: {$0.id == conversation.id}){
+                                self.conversations[index] = conversation
+                            }else{
+                                self.conversations.insert(conversation, at: 0)
+                            }
+                            self.tableView.reloadData()
                         }
-                        self.tableView.reloadData()
-                    }
-                })
+                    })
+                }
             }
+            
+            
         }
     }
 }

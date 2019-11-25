@@ -33,8 +33,8 @@ class ConsultTableViewCell: UITableViewCell {
                                                                                        "timestamp": Date().timeIntervalSince1970,
                                                                                        "doctorName": doctor.name,
                                                                                        "patientName":CurrentUser.shared.name])
-        Firestore.firestore().collection("doctors-patients").document(CurrentUser.shared.id).setData([doctor.id: ref.documentID])
-        Firestore.firestore().collection("doctors-patients").document(doctor.id).setData([CurrentUser.shared.id: ref.documentID])
+        Firestore.firestore().collection("doctors-patients").document(CurrentUser.shared.id).setData([doctor.id: ref.documentID], merge: true)
+        Firestore.firestore().collection("doctors-patients").document(doctor.id).setData([CurrentUser.shared.id: ref.documentID], merge: true)
         Alert.show(message: "\(doctor.name) is added to your list of consultants") {
             self.delegate?.consulted(doctor: self.doctor)
         }
