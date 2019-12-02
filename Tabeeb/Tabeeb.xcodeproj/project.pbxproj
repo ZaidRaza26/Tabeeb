@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61E95B1923958D0E00C90546 /* packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E95B1823958D0E00C90546 /* packet.swift */; };
+		61E95B1B2395942B00C90546 /* PacketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E95B1A2395942B00C90546 /* PacketCollectionViewCell.swift */; };
 		954CAD52DFAB64DDCFCB10C9 /* Pods_TabeebTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872373673875EDA209E3DDD2 /* Pods_TabeebTests.framework */; };
 		B0AE6B151F27266420D16EC6 /* Pods_Tabeeb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0DD668361197D6CF168697 /* Pods_Tabeeb.framework */; };
 		EEC2D566E223062B266C2F97 /* Pods_TabeebUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FCF1ACB7F5355C7EC35F60 /* Pods_TabeebUITests.framework */; };
@@ -62,6 +64,8 @@
 
 /* Begin PBXFileReference section */
 		0D27751758098B4F5AFA4DFA /* Pods-Tabeeb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tabeeb.debug.xcconfig"; path = "Target Support Files/Pods-Tabeeb/Pods-Tabeeb.debug.xcconfig"; sourceTree = "<group>"; };
+		61E95B1823958D0E00C90546 /* packet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = packet.swift; sourceTree = "<group>"; };
+		61E95B1A2395942B00C90546 /* PacketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketCollectionViewCell.swift; sourceTree = "<group>"; };
 		6B921A1059FB348711270155 /* Pods-TabeebTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabeebTests.debug.xcconfig"; path = "Target Support Files/Pods-TabeebTests/Pods-TabeebTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D0DD668361197D6CF168697 /* Pods_Tabeeb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tabeeb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC14BCE182DD497F2CC450B /* Pods-TabeebTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabeebTests.release.xcconfig"; path = "Target Support Files/Pods-TabeebTests/Pods-TabeebTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 				FA7C1390236795E4005AB2BD /* ChatViewController.swift */,
 				FA7C1392236799A3005AB2BD /* Message.swift */,
 				FA0219A32368DDA50093B55E /* HomeViewController.swift */,
+				61E95B1823958D0E00C90546 /* packet.swift */,
+				61E95B1A2395942B00C90546 /* PacketCollectionViewCell.swift */,
 			);
 			path = Tabeeb;
 			sourceTree = "<group>";
@@ -503,7 +509,9 @@
 				FAB9FD3A23664CD300235FE8 /* Conversation.swift in Sources */,
 				FA0219A22368D6F90093B55E /* ShadowView.swift in Sources */,
 				FAB9FD3823663B9C00235FE8 /* ConsultTableViewCell.swift in Sources */,
+				61E95B1B2395942B00C90546 /* PacketCollectionViewCell.swift in Sources */,
 				FA1DE33A23342DBF0018DB1C /* FirebaseServices.swift in Sources */,
+				61E95B1923958D0E00C90546 /* packet.swift in Sources */,
 				FA10259223394C810034EAD4 /* Extension+UIViewController.swift in Sources */,
 				FAB9FD302366268100235FE8 /* ConversationsViewController.swift in Sources */,
 				FA7C1393236799A3005AB2BD /* Message.swift in Sources */,

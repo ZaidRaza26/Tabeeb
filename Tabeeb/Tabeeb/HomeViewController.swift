@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import Firebase
+
 
 class HomeViewController: UIViewController {
+    var packets:[Packet] = []
 
+    
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getPackets()
         collectionView.dataSource = self
         // Do any additional setup after loading the view.
     }
@@ -25,14 +29,37 @@ class HomeViewController: UIViewController {
 
     }
     
+    func getPackets(){
+        
+        Firestore.firestore().collection("packets").document(CurrentUser.shared.id).collection("packets").addSnapshotListener { (snapshot, error) in
+                for change in snapshot?.documentChanges ?? []{
+                        if change.type == DocumentChangeType.added{
+                            let id = change.document.documentID
+                            var dict = change.document.data()
+                            dict["id"] = id
+                            dict["date"] = (dict["date"] as! Timestamp).seconds
+                            let packet:Packet = try! decode(with: dict)
+                            self.packets.append(packet)
+                            DispatchQueue.main.async {
+                                self.collectionView.reloadData()
+                            }
+                        }
+                        
+                    }
 
+        
+    }
+    
+
+}
 }
 extension HomeViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return packets.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PacketCollectionViewCell
+        cell.packet = packets[indexPath.item]
         return cell
     }
 }
