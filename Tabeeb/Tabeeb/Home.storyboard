@@ -534,11 +534,21 @@ Score</string>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xW7-1D-BKI">
                                                                     <rect key="frame" x="0.0" y="0.0" width="116.5" height="75"/>
-                                                                    <state key="normal" image="TakenUnselectedWhite"/>
+                                                                    <state key="normal" title="Skip">
+                                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="skipTapped:" destination="zaP-Lg-lxA" eventType="touchUpInside" id="C2h-HP-5k4"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5u-s5-hle">
                                                                     <rect key="frame" x="124.5" y="0.0" width="116.5" height="75"/>
-                                                                    <state key="normal" image="SnoozeUnselectedWhite"/>
+                                                                    <state key="normal" title="Taken">
+                                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="takenTapped:" destination="zaP-Lg-lxA" eventType="touchUpInside" id="cWR-1L-22H"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <constraints>
@@ -629,6 +639,7 @@ Cg
                                         </constraints>
                                         <connections>
                                             <outlet property="dayOutlet" destination="Reg-gP-h3o" id="Ylp-D5-8ak"/>
+                                            <outlet property="drugOutlet" destination="X3a-Nz-vPI" id="Nf2-BP-kJc"/>
                                             <outlet property="statusOutlet" destination="Ztd-16-L5o" id="8rF-KL-pkg"/>
                                             <outlet property="timeOutlet" destination="uBw-zJ-OR7" id="j0J-Og-mSn"/>
                                         </connections>
@@ -716,8 +727,6 @@ Cg
         </scene>
     </scenes>
     <resources>
-        <image name="SnoozeUnselectedWhite" width="16" height="16"/>
-        <image name="TakenUnselectedWhite" width="16" height="16"/>
         <image name="consult_icon" width="24" height="24"/>
         <image name="doctor" width="75" height="75"/>
         <image name="home_icon" width="24" height="24"/>

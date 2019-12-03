@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Firebase
 
 class PacketCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var drugOutlet: UILabel!
     @IBOutlet weak var timeOutlet: UILabel!
     @IBOutlet weak var dayOutlet: UILabel!
     @IBOutlet weak var statusOutlet: UILabel!
@@ -18,6 +20,7 @@ class PacketCollectionViewCell: UICollectionViewCell {
            didSet{
             timeOutlet.text = packet.dateObject.toString(format: "HH:mm a")
             dayOutlet.text = packet.dateObject.toString(format: "EEEE")
+            drugOutlet.text = packet.drugs + packet.dosage
 
 //               lastMessageLabel.text = conversation.lastMessage
 //               timeLabel.text = Date(timeIntervalSince1970: conversation.timestamp).timeAgo(numericDates: true)
@@ -25,6 +28,17 @@ class PacketCollectionViewCell: UICollectionViewCell {
        }
        
     
+    
+   
+    @IBAction func skipTapped(_ sender: UIButton) {
+        // Update one field, creating the document if it does not exist.
+        Firestore.firestore().collection("packets").document(CurrentUser.shared.id).collection("packets").document(packet.id).setData([ "action": "1" ], merge: true)
+    }
+    
+    
+    @IBAction func takenTapped(_ sender: Any) {
+        Firestore.firestore().collection("packets").document(CurrentUser.shared.id).collection("packets").document(packet.id).setData([ "action": "2" ], merge: true)
+    }
     
     
     
