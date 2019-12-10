@@ -15,6 +15,9 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
     
     var messages:[Message] = []
     var conversation : Conversation!
+    @IBOutlet var chooseBuuton: UIButton!
+    var imagePicker = UIImagePickerController()
+    
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +28,7 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         getMessages()
-
+        
     }
     
     func configureMessageCollectionView() {
@@ -45,7 +48,37 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
     
     func configureMessageInputBar() {
         messageInputBar.delegate = self
+        
+        let image = UIImage(named: "plus")!
+        let button = InputBarButtonItem(frame: CGRect(origin: .init(x: 2, y: -5), size: CGSize(width: image.size.width, height: image.size.height)))
+        button.image = image
+        messageInputBar.setLeftStackViewWidthConstant(to: 36, animated: false)
+        messageInputBar.setStackViewItems([button], forStack: .left, animated: false)
+        
+        button.addTarget(self, action:#selector(handleRegister), for: .touchUpInside)
+        
+        
     }
+    
+    
+    
+    @objc func handleRegister(){
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+            print("Button capture")
+            
+            imagePicker.delegate = self
+            imagePicker.sourceType = .savedPhotosAlbum
+            imagePicker.allowsEditing = true
+            
+            present(imagePicker, animated: true, completion: nil)
+        }
+        
+        
+    }
+    
+
+    
+  
     
     func isLastSectionVisible() -> Bool {
         
@@ -91,14 +124,15 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
     public func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
         for component in inputBar.inputTextView.components {
             if let str = component as? String {
-                sendMessage(text: str)
+                sendMessage(text: str,type: 0)
                 inputBar.inputTextView.text = ""
             }
         }
     }
     
-    func sendMessage(text : String){
+    func sendMessage(text : String, type:Int){
         Firestore.firestore().collection("conversations").document(conversation.id).collection("messages").addDocument(data: ["text" :text,
+                                                                                                                              "type" : type,
                                                                                                                               "senderID" : CurrentUser.shared.id,
                                                                                                                               "timestamp" : Date().timeIntervalSince1970])
         Firestore.firestore().collection("conversations").document(conversation.id).updateData(["lastMessage": text,
@@ -184,4 +218,20 @@ extension Doctor: SenderType{
     var displayName: String {
         return name
     }
+}
+
+extension ChatViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.editedImage] as? UIImage{
+            let base64String = image.jpegData(compressionQuality: 0.1)!.base64EncodedString()
+            sendMessage(text: base64String, type: 1)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
+    }
+    
 }

@@ -11,6 +11,8 @@ import Firebase
 
 class PacketCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var frontView: UIView!
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var drugOutlet: UILabel!
     @IBOutlet weak var timeOutlet: UILabel!
     @IBOutlet weak var dayOutlet: UILabel!
@@ -20,7 +22,7 @@ class PacketCollectionViewCell: UICollectionViewCell {
            didSet{
             timeOutlet.text = packet.dateObject.toString(format: "HH:mm a")
             dayOutlet.text = packet.dateObject.toString(format: "EEEE")
-            drugOutlet.text = packet.drugs + packet.dosage
+            drugOutlet.text = packet.drugs + " " + packet.dosage
 
 //               lastMessageLabel.text = conversation.lastMessage
 //               timeLabel.text = Date(timeIntervalSince1970: conversation.timestamp).timeAgo(numericDates: true)
@@ -41,5 +43,11 @@ class PacketCollectionViewCell: UICollectionViewCell {
     }
     
     
-    
+    func flip(){
+        let transitionOptions = UIView.AnimationOptions.transitionFlipFromLeft
+        UIView.transition(with: self.contentView, duration: 0.5, options: transitionOptions, animations: {
+            self.frontView.isHidden = !self.frontView.isHidden
+            self.backView.isHidden = !self.backView.isHidden
+        })
+    }
 }

@@ -14,6 +14,7 @@ struct Message{
     let text:String
     let senderID:String
     let timestamp:Double
+    let type:Int
 }
 
 extension Message: MessageType{
@@ -33,8 +34,25 @@ extension Message: MessageType{
     }
     
     var kind: MessageKind {
-        return MessageKind.text(text)
+        if type == 1{
+            return .photo(Photo(base64: text))
+        }
+        return .text(text)
     }
 }
 
 extension Message: Codable{}
+
+class Photo:MediaItem{
+    var url: URL? = nil
+    
+    var image: UIImage?
+    
+    var placeholderImage: UIImage = UIImage()
+    
+    var size: CGSize = CGSize(width: 200, height: 200)
+    
+    init(base64:String) {
+        image = UIImage(data: Data(base64Encoded: base64)!)
+    }
+}

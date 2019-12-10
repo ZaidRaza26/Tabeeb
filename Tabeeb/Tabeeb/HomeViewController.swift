@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getPackets()
+        collectionView.delegate = self
         collectionView.dataSource = self
         // Do any additional setup after loading the view.
     }
@@ -61,5 +62,13 @@ extension HomeViewController : UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PacketCollectionViewCell
         cell.packet = packets[indexPath.item]
         return cell
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? PacketCollectionViewCell
+            else {return}
+        cell.flip()
     }
 }

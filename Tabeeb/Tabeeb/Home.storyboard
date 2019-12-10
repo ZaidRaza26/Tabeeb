@@ -583,29 +583,14 @@ Score</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="281" height="268"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3a-Nz-vPI">
-                                                            <rect key="frame" x="8" y="16" width="265" height="29"/>
+                                                            <rect key="frame" x="8" y="16" width="265" height="55.5"/>
                                                             <attributedString key="attributedText">
-                                                                <fragment content="Linosopril 5 MG">
-                                                                    <attributes>
-                                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <font key="NSFont" metaFont="system" size="14"/>
-                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                    </attributes>
-                                                                </fragment>
                                                                 <fragment>
-                                                                    <string key="content" base64-UTF8="YES">
-Cg
-</string>
+                                                                    <string key="content">Linosopril 5 MG
+8 Tablets</string>
                                                                     <attributes>
-                                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <font key="NSFont" metaFont="smallSystem"/>
-                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                    </attributes>
-                                                                </fragment>
-                                                                <fragment content="8 Tablets">
-                                                                    <attributes>
-                                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <font key="NSFont" metaFont="system" size="10"/>
+                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                        <font key="NSFont" size="25" name=".SFNSDisplay"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
                                                                 </fragment>
@@ -638,8 +623,10 @@ Cg
                                             <constraint firstItem="BUL-88-qQ1" firstAttribute="leading" secondItem="zaP-Lg-lxA" secondAttribute="leading" id="sgD-J4-vr9"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="backView" destination="O2d-WC-gpe" id="ovl-Is-dx0"/>
                                             <outlet property="dayOutlet" destination="Reg-gP-h3o" id="Ylp-D5-8ak"/>
                                             <outlet property="drugOutlet" destination="X3a-Nz-vPI" id="Nf2-BP-kJc"/>
+                                            <outlet property="frontView" destination="BUL-88-qQ1" id="4pw-Or-HbT"/>
                                             <outlet property="statusOutlet" destination="Ztd-16-L5o" id="8rF-KL-pkg"/>
                                             <outlet property="timeOutlet" destination="uBw-zJ-OR7" id="j0J-Og-mSn"/>
                                         </connections>
