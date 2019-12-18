@@ -64,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		0D27751758098B4F5AFA4DFA /* Pods-Tabeeb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tabeeb.debug.xcconfig"; path = "Target Support Files/Pods-Tabeeb/Pods-Tabeeb.debug.xcconfig"; sourceTree = "<group>"; };
+		6115F49B23A80C3100751CC0 /* Tabeeb.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tabeeb.entitlements; sourceTree = "<group>"; };
 		61E95B1823958D0E00C90546 /* packet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = packet.swift; sourceTree = "<group>"; };
 		61E95B1A2395942B00C90546 /* PacketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketCollectionViewCell.swift; sourceTree = "<group>"; };
 		6B921A1059FB348711270155 /* Pods-TabeebTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabeebTests.debug.xcconfig"; path = "Target Support Files/Pods-TabeebTests/Pods-TabeebTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +190,7 @@
 		FA3B8A242332B17D00A547E0 /* Tabeeb */ = {
 			isa = PBXGroup;
 			children = (
+				6115F49B23A80C3100751CC0 /* Tabeeb.entitlements */,
 				FA3B8A252332B17D00A547E0 /* AppDelegate.swift */,
 				FA3B8A532332B1C500A547E0 /* Authentication.storyboard */,
 				FA3B8A2C2332B17E00A547E0 /* Assets.xcassets */,
@@ -686,6 +688,7 @@
 			baseConfigurationReference = 0D27751758098B4F5AFA4DFA /* Pods-Tabeeb.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tabeeb/Tabeeb.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F92WBSNLJ3;
 				INFOPLIST_FILE = Tabeeb/Info.plist;
@@ -706,6 +709,7 @@
 			baseConfigurationReference = DD19A570BFBAB6A787E88CD8 /* Pods-Tabeeb.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tabeeb/Tabeeb.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F92WBSNLJ3;
 				INFOPLIST_FILE = Tabeeb/Info.plist;

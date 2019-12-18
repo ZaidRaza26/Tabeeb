@@ -8,6 +8,7 @@
 
 import Foundation
 struct Packet: Codable {
+    let action:Int?
     let id:String
     let date:TimeInterval
     let drugs:String

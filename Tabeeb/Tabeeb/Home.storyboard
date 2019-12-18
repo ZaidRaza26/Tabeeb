@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iov-Bx-gL0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iov-Bx-gL0">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -244,7 +244,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Abq-9L-YKc">
                                                 <rect key="frame" x="8" y="8" width="100.5" height="95.5"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmo-HA-2pf" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
+                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmo-HA-2pf" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
                                                         <rect key="frame" x="0.0" y="0.0" width="100.5" height="95.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
@@ -649,7 +649,10 @@ Score</string>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="gsh-T2-ztu"/>
                     <connections>
+                        <outlet property="circularRingOutlet" destination="D9r-3k-I5V" id="dCE-ff-saA"/>
                         <outlet property="collectionView" destination="9x7-3J-9H3" id="j0v-zx-FIU"/>
+                        <outlet property="skippedScore" destination="14J-PG-ycx" id="6Wg-oH-hsP"/>
+                        <outlet property="takenScore" destination="lhg-s4-EkT" id="a7q-w7-Sn9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agc-ef-h5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
