@@ -9,6 +9,7 @@
 import Foundation
 import Firebase
 
+var deviceToken : String = ""
 class FirebaseServices{
     class func signUp(name:String,email:String,password:String,dob:String,completion:@escaping (Result<Bool>) -> Void){
         
@@ -23,7 +24,8 @@ class FirebaseServices{
                 let dict = ["id": userID,
                             "email":email,
                             "name":name,
-                            "dob":dob]
+                            "dob":dob,
+                            "deviceToken":deviceToken]
                 db.collection("patients").document(userID).setData(dict, completion: { (error) in
                     if error == nil{
                         do{
@@ -48,6 +50,20 @@ class FirebaseServices{
             }
             else if let result = authResult {
                 let userID = result.user.uid
+                
+                
+                if deviceToken != nil && !deviceToken.isEmpty {
+                
+                let dict = [
+                "deviceToken":deviceToken]
+                
+                Firestore.firestore().collection("patients").document(userID).setData(dict, merge: true)
+                }
+                
+                
+                
+                
+                
                 Firestore.firestore().collection("patients").document(userID).getDocument(completion: { (snapshot, error) in
                     if let error = error {
                         completion(.failure(error.localizedDescription))

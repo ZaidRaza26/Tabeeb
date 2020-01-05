@@ -11,6 +11,8 @@ import Firebase
 
 class PacketCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var skippedButton: UIButton!
+    @IBOutlet weak var takenButton: UIButton!
     @IBOutlet weak var frontView: UIView!
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var drugOutlet: UILabel!
@@ -23,7 +25,16 @@ class PacketCollectionViewCell: UICollectionViewCell {
             timeOutlet.text = packet.dateObject.toString(format: "HH:mm a")
             dayOutlet.text = packet.dateObject.toString(format: "EEEE")
             drugOutlet.text = packet.drugs + " " + packet.dosage
-
+            takenButton.isSelected = packet.action == 2
+            skippedButton.isSelected = packet.action == 1
+//            if {
+//                takenButton.isSelected = true
+//                skippedButton.isSelected = false
+//            }
+//            else if packet.action == 1{
+//                skippedButton.isSelected = true
+//                takenButton.isSelected = false
+//            }
 //               lastMessageLabel.text = conversation.lastMessage
 //               timeLabel.text = Date(timeIntervalSince1970: conversation.timestamp).timeAgo(numericDates: true)
            }
@@ -35,11 +46,13 @@ class PacketCollectionViewCell: UICollectionViewCell {
     @IBAction func skipTapped(_ sender: UIButton) {
         // Update one field, creating the document if it does not exist.
         Firestore.firestore().collection("packets").document(CurrentUser.shared.id).collection("packets").document(packet.id).setData([ "action": 1 ], merge: true)
+        //packet.action = 1
     }
     
     
     @IBAction func takenTapped(_ sender: Any) {
         Firestore.firestore().collection("packets").document(CurrentUser.shared.id).collection("packets").document(packet.id).setData([ "action": 2 ], merge: true)
+        
     }
     
     

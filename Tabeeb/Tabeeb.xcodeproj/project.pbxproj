@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11ABAFE720B5A588D9EB1091 /* Pods_Tabeeb_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F28BFD58A7D27DF9EF2C9280 /* Pods_Tabeeb_OneSignalNotificationServiceExtension.framework */; };
+		6194B3A523B538F300C99A2A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6194B3A423B538F300C99A2A /* NotificationService.swift */; };
+		6194B3A923B538F300C99A2A /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6194B3A223B538F300C99A2A /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		61E95B1923958D0E00C90546 /* packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E95B1823958D0E00C90546 /* packet.swift */; };
 		61E95B1B2395942B00C90546 /* PacketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E95B1A2395942B00C90546 /* PacketCollectionViewCell.swift */; };
 		954CAD52DFAB64DDCFCB10C9 /* Pods_TabeebTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872373673875EDA209E3DDD2 /* Pods_TabeebTests.framework */; };
@@ -46,6 +49,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6194B3A723B538F300C99A2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA3B8A1A2332B17D00A547E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6194B3A123B538F300C99A2A;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
 		FA3B8A372332B17E00A547E0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA3B8A1A2332B17D00A547E0 /* Project object */;
@@ -62,9 +72,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6194B3AA23B538F300C99A2A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6194B3A923B538F300C99A2A /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0B4986050218C581557C9950 /* Pods-Tabeeb-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tabeeb-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-Tabeeb-OneSignalNotificationServiceExtension/Pods-Tabeeb-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		0D27751758098B4F5AFA4DFA /* Pods-Tabeeb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tabeeb.debug.xcconfig"; path = "Target Support Files/Pods-Tabeeb/Pods-Tabeeb.debug.xcconfig"; sourceTree = "<group>"; };
 		6115F49B23A80C3100751CC0 /* Tabeeb.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tabeeb.entitlements; sourceTree = "<group>"; };
+		6194B3A223B538F300C99A2A /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6194B3A423B538F300C99A2A /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		6194B3A623B538F300C99A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61E95B1823958D0E00C90546 /* packet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = packet.swift; sourceTree = "<group>"; };
 		61E95B1A2395942B00C90546 /* PacketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketCollectionViewCell.swift; sourceTree = "<group>"; };
 		6B921A1059FB348711270155 /* Pods-TabeebTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabeebTests.debug.xcconfig"; path = "Target Support Files/Pods-TabeebTests/Pods-TabeebTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,9 +100,11 @@
 		6EC14BCE182DD497F2CC450B /* Pods-TabeebTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabeebTests.release.xcconfig"; path = "Target Support Files/Pods-TabeebTests/Pods-TabeebTests.release.xcconfig"; sourceTree = "<group>"; };
 		872373673875EDA209E3DDD2 /* Pods_TabeebTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabeebTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB0E835236319FE189A6977B /* Pods-TabeebUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabeebUITests.release.xcconfig"; path = "Target Support Files/Pods-TabeebUITests/Pods-TabeebUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B1AF757718F52910A1C08626 /* Pods-Tabeeb-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tabeeb-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-Tabeeb-OneSignalNotificationServiceExtension/Pods-Tabeeb-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		B5804B583E3649976EEDFBB5 /* Pods-TabeebUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabeebUITests.debug.xcconfig"; path = "Target Support Files/Pods-TabeebUITests/Pods-TabeebUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7FCF1ACB7F5355C7EC35F60 /* Pods_TabeebUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabeebUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD19A570BFBAB6A787E88CD8 /* Pods-Tabeeb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tabeeb.release.xcconfig"; path = "Target Support Files/Pods-Tabeeb/Pods-Tabeeb.release.xcconfig"; sourceTree = "<group>"; };
+		F28BFD58A7D27DF9EF2C9280 /* Pods_Tabeeb_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tabeeb_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0219A12368D6F90093B55E /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		FA0219A32368DDA50093B55E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA10258F23394B920034EAD4 /* Extension+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
@@ -115,6 +145,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6194B39F23B538F300C99A2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11ABAFE720B5A588D9EB1091 /* Pods_Tabeeb_OneSignalNotificationServiceExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA3B8A1F2332B17D00A547E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -151,6 +189,8 @@
 				6EC14BCE182DD497F2CC450B /* Pods-TabeebTests.release.xcconfig */,
 				B5804B583E3649976EEDFBB5 /* Pods-TabeebUITests.debug.xcconfig */,
 				AB0E835236319FE189A6977B /* Pods-TabeebUITests.release.xcconfig */,
+				B1AF757718F52910A1C08626 /* Pods-Tabeeb-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				0B4986050218C581557C9950 /* Pods-Tabeeb-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -161,8 +201,18 @@
 				6D0DD668361197D6CF168697 /* Pods_Tabeeb.framework */,
 				872373673875EDA209E3DDD2 /* Pods_TabeebTests.framework */,
 				D7FCF1ACB7F5355C7EC35F60 /* Pods_TabeebUITests.framework */,
+				F28BFD58A7D27DF9EF2C9280 /* Pods_Tabeeb_OneSignalNotificationServiceExtension.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6194B3A323B538F300C99A2A /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				6194B3A423B538F300C99A2A /* NotificationService.swift */,
+				6194B3A623B538F300C99A2A /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
 		FA3B8A192332B17D00A547E0 = {
@@ -171,6 +221,7 @@
 				FA3B8A242332B17D00A547E0 /* Tabeeb */,
 				FA3B8A392332B17E00A547E0 /* TabeebTests */,
 				FA3B8A442332B17E00A547E0 /* TabeebUITests */,
+				6194B3A323B538F300C99A2A /* OneSignalNotificationServiceExtension */,
 				FA3B8A232332B17D00A547E0 /* Products */,
 				4EB264FD462B5C00FC9E8D17 /* Pods */,
 				509DDE176511C30CDF310D22 /* Frameworks */,
@@ -183,6 +234,7 @@
 				FA3B8A222332B17D00A547E0 /* Tabeeb.app */,
 				FA3B8A362332B17E00A547E0 /* TabeebTests.xctest */,
 				FA3B8A412332B17E00A547E0 /* TabeebUITests.xctest */,
+				6194B3A223B538F300C99A2A /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -207,13 +259,13 @@
 				FA10258F23394B920034EAD4 /* Extension+Date.swift */,
 				FA1DE3312334268F0018DB1C /* Validator.swift */,
 				FA1DE3332334276B0018DB1C /* Alert.swift */,
-				FA1DE33923342DBF0018DB1C /* FirebaseServices.swift */,
 				FA1DE33B23342F840018DB1C /* Result.swift */,
 				FA10259523395E7F0034EAD4 /* Home.storyboard */,
 				FA0219A12368D6F90093B55E /* ShadowView.swift */,
 				FAB9FD2F2366268100235FE8 /* ConversationsViewController.swift */,
 				FAB9FD31236628FD00235FE8 /* ConsultViewController.swift */,
 				FAB9FD3323662E5500235FE8 /* RouteManager.swift */,
+				FA1DE33923342DBF0018DB1C /* FirebaseServices.swift */,
 				FAB9FD35236636BE00235FE8 /* Doctor.swift */,
 				FAB9FD3723663B9C00235FE8 /* ConsultTableViewCell.swift */,
 				FAB9FD3923664CD300235FE8 /* Conversation.swift */,
@@ -248,6 +300,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6194B3A123B538F300C99A2A /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6194B3AD23B538F300C99A2A /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				5FB13B65FE9F24EF36D76805 /* [CP] Check Pods Manifest.lock */,
+				6194B39E23B538F300C99A2A /* Sources */,
+				6194B39F23B538F300C99A2A /* Frameworks */,
+				6194B3A023B538F300C99A2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 6194B3A223B538F300C99A2A /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		FA3B8A212332B17D00A547E0 /* Tabeeb */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA3B8A4A2332B17E00A547E0 /* Build configuration list for PBXNativeTarget "Tabeeb" */;
@@ -257,10 +327,12 @@
 				FA3B8A1F2332B17D00A547E0 /* Frameworks */,
 				FA3B8A202332B17D00A547E0 /* Resources */,
 				F7302A8BD14137DC008C3004 /* [CP] Embed Pods Frameworks */,
+				6194B3AA23B538F300C99A2A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6194B3A823B538F300C99A2A /* PBXTargetDependency */,
 			);
 			name = Tabeeb;
 			productName = Tabeeb;
@@ -311,10 +383,13 @@
 		FA3B8A1A2332B17D00A547E0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = SZABIST;
 				TargetAttributes = {
+					6194B3A123B538F300C99A2A = {
+						CreatedOnToolsVersion = 11.3;
+					};
 					FA3B8A212332B17D00A547E0 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -344,11 +419,19 @@
 				FA3B8A212332B17D00A547E0 /* Tabeeb */,
 				FA3B8A352332B17E00A547E0 /* TabeebTests */,
 				FA3B8A402332B17E00A547E0 /* TabeebUITests */,
+				6194B3A123B538F300C99A2A /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6194B3A023B538F300C99A2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA3B8A202332B17D00A547E0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,6 +505,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5FB13B65FE9F24EF36D76805 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tabeeb-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DDEA3FC9F3A1D1F9E858ACE3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -450,38 +555,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tabeeb/Pods-Tabeeb-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/InputBarAccessoryView/InputBarAccessoryView.framework",
-				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Tabeeb/Pods-Tabeeb-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputBarAccessoryView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Tabeeb/Pods-Tabeeb-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -491,6 +569,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6194B39E23B538F300C99A2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6194B3A523B538F300C99A2A /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA3B8A1E2332B17D00A547E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -543,6 +629,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6194B3A823B538F300C99A2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6194B3A123B538F300C99A2A /* OneSignalNotificationServiceExtension */;
+			targetProxy = 6194B3A723B538F300C99A2A /* PBXContainerItemProxy */;
+		};
 		FA3B8A382332B17E00A547E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FA3B8A212332B17D00A547E0 /* Tabeeb */;
@@ -567,6 +658,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6194B3AB23B538F300C99A2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1AF757718F52910A1C08626 /* Pods-Tabeeb-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F92WBSNLJ3;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SZABIST.Tabeeb.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6194B3AC23B538F300C99A2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B4986050218C581557C9950 /* Pods-Tabeeb-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F92WBSNLJ3;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SZABIST.Tabeeb.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		FA3B8A482332B17E00A547E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -687,6 +822,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0D27751758098B4F5AFA4DFA /* Pods-Tabeeb.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Tabeeb/Tabeeb.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -708,6 +844,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DD19A570BFBAB6A787E88CD8 /* Pods-Tabeeb.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Tabeeb/Tabeeb.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -810,6 +947,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6194B3AD23B538F300C99A2A /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6194B3AB23B538F300C99A2A /* Debug */,
+				6194B3AC23B538F300C99A2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FA3B8A1D2332B17D00A547E0 /* Build configuration list for PBXProject "Tabeeb" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

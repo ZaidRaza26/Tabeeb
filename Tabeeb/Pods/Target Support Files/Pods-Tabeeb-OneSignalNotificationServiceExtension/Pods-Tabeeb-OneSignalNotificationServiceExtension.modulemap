@@ -1,0 +1,6 @@
+framework module Pods_Tabeeb_OneSignalNotificationServiceExtension {
+  umbrella header "Pods-Tabeeb-OneSignalNotificationServiceExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     
@@ -41,6 +42,13 @@ class LoginViewController: UIViewController {
                     Alert.show(message: message)
                 }
             }
+            
+            
+
+            
+            
+            
+            
         }
         catch{
             let _error = error as! FieldError

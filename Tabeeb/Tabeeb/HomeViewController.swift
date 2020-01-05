@@ -15,6 +15,9 @@ class HomeViewController: UIViewController {
     var packets:[Packet] = []
     var arrayOfPacketsToCalculate:[Packet] = []
     
+    
+    
+    
     @IBOutlet weak var circularRingOutlet: UICircularProgressRing!
     @IBOutlet weak var takenScore: UILabel!
     @IBOutlet weak var skippedScore: UILabel!
@@ -54,6 +57,9 @@ class HomeViewController: UIViewController {
             }
         }
         
+        
+        
+        
         var taken = 0
         var remaining = 0
         var totalPercent:Double = 0.0
@@ -78,23 +84,31 @@ class HomeViewController: UIViewController {
     
     
     func getPackets(){
+        
         Firestore.firestore().collection("packets").document(CurrentUser.shared.id).collection("packets").addSnapshotListener { (snapshot, error) in
             
             for change in snapshot?.documentChanges ?? []{
+                let id = change.document.documentID
+                var dict = change.document.data()
+                dict["id"] = id
+                dict["date"] = (dict["date"] as! Timestamp).seconds
+                let packet:Packet = try! decode(with: dict)
                 if change.type == DocumentChangeType.added{
                     
-                    let id = change.document.documentID
-                    var dict = change.document.data()
-                    dict["id"] = id
-                    dict["date"] = (dict["date"] as! Timestamp).seconds
-                    let packet:Packet = try! decode(with: dict)
+                    
                     if(Calendar.current.isDateInToday(packet.dateObject)){
                         self.packets.append(packet)
                         DispatchQueue.main.async {
                             self.collectionView.reloadData()
                         }
                     }
+                }else if change.type == DocumentChangeType.modified{
+                    if let index = self.packets.lastIndex(where: {$0.id == packet.id}){
+                        self.packets[index] = packet
+                        self.collectionView.reloadData()
+                    }
                 }
+                
                
             }
            
@@ -104,6 +118,8 @@ class HomeViewController: UIViewController {
         
         
     }
+    
+    
 }
 extension HomeViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

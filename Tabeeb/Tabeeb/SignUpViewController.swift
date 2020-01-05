@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UIViewController {
 
@@ -55,6 +56,9 @@ class SignUpViewController: UIViewController {
                     Alert.show(message: message)
                 }
             }
+            
+            
+
         }
         catch{
             let _error = error as! FieldError

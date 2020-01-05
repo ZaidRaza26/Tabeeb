@@ -92,6 +92,7 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - OneSignal (2.12.3)
   - Protobuf (3.10.0)
   - UICircularProgressRing (6.4.0)
 
@@ -100,10 +101,11 @@ DEPENDENCIES:
   - Firebase/Firestore
   - JGProgressHUD
   - MessageKit
+  - OneSignal
   - UICircularProgressRing
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAuth
@@ -123,6 +125,7 @@ SPEC REPOS:
     - leveldb-library
     - MessageKit
     - nanopb
+    - OneSignal
     - Protobuf
     - UICircularProgressRing
 
@@ -146,9 +149,10 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   MessageKit: e892a9ca49ebe6d82684d3a93ad84021fa23e2c6
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  OneSignal: 30b6e03a1f14169c4313e301a7b7bdf467b5a575
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
   UICircularProgressRing: 907613633e76e561b972a3868c95517d14c71006
 
-PODFILE CHECKSUM: d76a8e2f70a8ae5b9fd1ff89f68a3ef57c7ccf22
+PODFILE CHECKSUM: d69165c8eb49ab1cc25a65f6e77a37d7c99f0e1f
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.4

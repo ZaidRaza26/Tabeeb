@@ -13,6 +13,13 @@ pod 'UICircularProgressRing'
 pod 'JGProgressHUD'
 
 
+  pod 'OneSignal'
+
+target 'OneSignalNotificationServiceExtension' do
+  pod 'OneSignal'
+end
+
+
 
   target 'TabeebTests' do
     inherit! :search_paths
