@@ -244,41 +244,10 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Abq-9L-YKc">
                                                 <rect key="frame" x="8" y="8" width="100.5" height="95.5"/>
                                                 <subviews>
-                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmo-HA-2pf" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100.5" height="95.5"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="ibRingStyle">
-                                                                <integer key="value" value="2"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="outerRingWidth">
-                                                                <real key="value" value="7"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="innerRingWidth">
-                                                                <real key="value" value="7"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="outerRingColor">
-                                                                <color key="value" name="SecondaryColor"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shouldShowValueText" value="NO"/>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="innerRingColor">
-                                                                <color key="value" red="0.28627450980000002" green="0.56470588239999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
-                                                                <real key="value" value="-90"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="endAngle">
-                                                                <real key="value" value="270"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9r-3k-I5V" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
                                                         <rect key="frame" x="0.0" y="0.0" width="100.5" height="95.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="ibRingStyle">
-                                                                <integer key="value" value="2"/>
-                                                            </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="outerRingWidth">
                                                                 <real key="value" value="7"/>
                                                             </userDefinedRuntimeAttribute>
@@ -286,7 +255,7 @@
                                                                 <real key="value" value="7"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="outerRingColor">
-                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="value" red="0.28627450980392155" green="0.56470588235294117" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="shouldShowValueText" value="NO"/>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="innerRingColor">
@@ -298,6 +267,10 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="endAngle">
                                                                 <real key="value" value="270"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fullCircle" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vug-wk-hZ8">
@@ -311,16 +284,12 @@ Score</string>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="kmo-HA-2pf" firstAttribute="bottom" secondItem="D9r-3k-I5V" secondAttribute="bottom" id="3Gg-Hc-4gJ"/>
                                                     <constraint firstItem="D9r-3k-I5V" firstAttribute="leading" secondItem="Abq-9L-YKc" secondAttribute="leading" id="K9S-rs-hNq"/>
-                                                    <constraint firstItem="kmo-HA-2pf" firstAttribute="trailing" secondItem="D9r-3k-I5V" secondAttribute="trailing" id="ObG-Nv-yqT"/>
                                                     <constraint firstItem="Vug-wk-hZ8" firstAttribute="centerX" secondItem="Abq-9L-YKc" secondAttribute="centerX" id="Olc-A0-U6I"/>
                                                     <constraint firstItem="Vug-wk-hZ8" firstAttribute="centerY" secondItem="Abq-9L-YKc" secondAttribute="centerY" id="XsV-TC-JyL"/>
-                                                    <constraint firstItem="kmo-HA-2pf" firstAttribute="top" secondItem="D9r-3k-I5V" secondAttribute="top" id="YBR-0e-W3Z"/>
                                                     <constraint firstAttribute="bottom" secondItem="D9r-3k-I5V" secondAttribute="bottom" id="guz-QG-7oz"/>
                                                     <constraint firstItem="D9r-3k-I5V" firstAttribute="top" secondItem="Abq-9L-YKc" secondAttribute="top" id="mZh-eM-NbM"/>
                                                     <constraint firstAttribute="trailing" secondItem="D9r-3k-I5V" secondAttribute="trailing" id="ndx-m5-wgq"/>
-                                                    <constraint firstItem="kmo-HA-2pf" firstAttribute="leading" secondItem="D9r-3k-I5V" secondAttribute="leading" id="zjC-uu-VGv"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Puh-me-Sla">
@@ -524,16 +493,16 @@ Score</string>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Packet time has passed" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztd-16-L5o">
-                                                            <rect key="frame" x="8" y="75" width="265" height="16.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztd-16-L5o">
+                                                            <rect key="frame" x="8" y="75" width="265" height="0.0"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iig-GW-bDv">
-                                                            <rect key="frame" x="20" y="185" width="241" height="75"/>
+                                                            <rect key="frame" x="44" y="201" width="193" height="59"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xW7-1D-BKI">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="116.5" height="75"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="92.5" height="59"/>
                                                                     <state key="normal" image="close_blue_unselected">
                                                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                     </state>
@@ -543,7 +512,7 @@ Score</string>
                                                                     </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5u-s5-hle">
-                                                                    <rect key="frame" x="124.5" y="0.0" width="116.5" height="75"/>
+                                                                    <rect key="frame" x="100.5" y="0.0" width="92.5" height="59"/>
                                                                     <state key="normal" image="check_blue_unselected">
                                                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                     </state>
@@ -566,13 +535,12 @@ Score</string>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="iig-GW-bDv" secondAttribute="trailing" constant="20" id="3qk-0z-559"/>
                                                         <constraint firstItem="Ztd-16-L5o" firstAttribute="leading" secondItem="1lY-lz-s7E" secondAttribute="leading" id="AHt-ct-GpX"/>
-                                                        <constraint firstItem="iig-GW-bDv" firstAttribute="leading" secondItem="BUL-88-qQ1" secondAttribute="leading" constant="20" id="SdX-zE-5jn"/>
                                                         <constraint firstItem="Ztd-16-L5o" firstAttribute="top" secondItem="1lY-lz-s7E" secondAttribute="bottom" constant="20" id="XZh-SH-DnY"/>
                                                         <constraint firstAttribute="bottom" secondItem="iig-GW-bDv" secondAttribute="bottom" constant="8" id="ciT-H1-Vf4"/>
                                                         <constraint firstAttribute="trailing" secondItem="Ztd-16-L5o" secondAttribute="trailing" constant="8" id="hpb-xL-SuM"/>
                                                         <constraint firstItem="1lY-lz-s7E" firstAttribute="top" secondItem="BUL-88-qQ1" secondAttribute="top" constant="8" id="mOe-oD-rHS"/>
+                                                        <constraint firstItem="iig-GW-bDv" firstAttribute="centerX" secondItem="BUL-88-qQ1" secondAttribute="centerX" id="sXh-yQ-HZC"/>
                                                         <constraint firstItem="1lY-lz-s7E" firstAttribute="leading" secondItem="BUL-88-qQ1" secondAttribute="leading" constant="8" id="z9K-lt-KmP"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>

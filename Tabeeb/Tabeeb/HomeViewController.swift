@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
         getScore()
         collectionView.delegate = self
         collectionView.dataSource = self
+        circularRingOutlet.style = .ontop
         // Do any additional setup after loading the view.
     }
     

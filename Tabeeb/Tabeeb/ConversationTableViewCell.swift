@@ -20,6 +20,11 @@ class ConversationTableViewCell: UITableViewCell {
             nameLabel.text = conversation.doctorName
             lastMessageLabel.text = conversation.lastMessage
             timeLabel.text = Date(timeIntervalSince1970: conversation.timestamp).timeAgo(numericDates: true)
+            
+            
+            if(conversation.lastMessage.count > 40){
+                lastMessageLabel.text = "Image"
+            }
         }
     }
     

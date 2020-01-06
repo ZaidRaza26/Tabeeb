@@ -81,7 +81,7 @@ import UIKit
      ## Author
      Luis Padron
      */
-    open var style: UICircularRingStyle = .inside {
+    open var style: UICircularRingStyle = .ontop {
         didSet { ringLayer.setNeedsDisplay() }
     }
 

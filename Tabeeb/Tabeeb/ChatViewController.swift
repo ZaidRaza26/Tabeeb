@@ -226,8 +226,12 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
         if let image = info[.editedImage] as? UIImage{
             let base64String = image.jpegData(compressionQuality: 0.1)!.base64EncodedString()
             sendMessage(text: base64String, type: 1)
+            
         }
         dismiss(animated: true, completion: nil)
+        self.messagesCollectionView.reloadData()
+        self.messagesCollectionView.scrollToBottom()
+
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
