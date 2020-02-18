@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11ABAFE720B5A588D9EB1091 /* Pods_Tabeeb_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F28BFD58A7D27DF9EF2C9280 /* Pods_Tabeeb_OneSignalNotificationServiceExtension.framework */; };
+		616728A423FB025B00F52479 /* VideoCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616728A323FB025B00F52479 /* VideoCallViewController.swift */; };
 		6194B3A523B538F300C99A2A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6194B3A423B538F300C99A2A /* NotificationService.swift */; };
 		6194B3A923B538F300C99A2A /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6194B3A223B538F300C99A2A /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		61E95B1923958D0E00C90546 /* packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E95B1823958D0E00C90546 /* packet.swift */; };
@@ -90,6 +91,7 @@
 		0B4986050218C581557C9950 /* Pods-Tabeeb-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tabeeb-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-Tabeeb-OneSignalNotificationServiceExtension/Pods-Tabeeb-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		0D27751758098B4F5AFA4DFA /* Pods-Tabeeb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tabeeb.debug.xcconfig"; path = "Target Support Files/Pods-Tabeeb/Pods-Tabeeb.debug.xcconfig"; sourceTree = "<group>"; };
 		6115F49B23A80C3100751CC0 /* Tabeeb.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tabeeb.entitlements; sourceTree = "<group>"; };
+		616728A323FB025B00F52479 /* VideoCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallViewController.swift; sourceTree = "<group>"; };
 		6194B3A223B538F300C99A2A /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6194B3A423B538F300C99A2A /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		6194B3A623B538F300C99A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				FA0219A32368DDA50093B55E /* HomeViewController.swift */,
 				61E95B1823958D0E00C90546 /* packet.swift */,
 				61E95B1A2395942B00C90546 /* PacketCollectionViewCell.swift */,
+				616728A323FB025B00F52479 /* VideoCallViewController.swift */,
 			);
 			path = Tabeeb;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				FAB9FD302366268100235FE8 /* ConversationsViewController.swift in Sources */,
 				FA7C1393236799A3005AB2BD /* Message.swift in Sources */,
 				FA3B8A562332B5C200A547E0 /* UnderLinedTextField.swift in Sources */,
+				616728A423FB025B00F52479 /* VideoCallViewController.swift in Sources */,
 				FA10259023394B920034EAD4 /* Extension+Date.swift in Sources */,
 				FA10259423394C910034EAD4 /* Extension+UIScrollView.swift in Sources */,
 				FAB9FD2E23661E4900235FE8 /* CurrentUser.swift in Sources */,

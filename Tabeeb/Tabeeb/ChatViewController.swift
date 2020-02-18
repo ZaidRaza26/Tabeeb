@@ -21,6 +21,9 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Call", style: .plain, target: self, action: #selector(callButtonTapped))
+        
         configureMessageCollectionView()
         configureMessageInputBar()
     }
@@ -235,6 +238,14 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
+    }
+    
+    @objc func callButtonTapped(){
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Video") as? VideoCallViewController {
+        navigationController?.pushViewController(vc, animated: true)
+            
+        }
         
     }
     
