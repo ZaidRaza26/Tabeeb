@@ -242,6 +242,44 @@
             </objects>
             <point key="canvasLocation" x="1805" y="227"/>
         </scene>
+        <!--Ringing View Controller-->
+        <scene sceneID="J7r-kh-WXC">
+            <objects>
+                <viewController storyboardIdentifier="Ringing" id="Ycb-vv-kXh" customClass="RingingViewController" customModule="Tabeeb" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BWW-U7-9BP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1Q-jX-Ipw">
+                                <rect key="frame" x="82" y="475" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pick"/>
+                                <connections>
+                                    <action selector="PickTapped:" destination="Ycb-vv-kXh" eventType="touchUpInside" id="Wrz-yE-8hE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcV-zR-WeM">
+                                <rect key="frame" x="247" y="475" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="CancelTapped:" destination="Ycb-vv-kXh" eventType="touchUpInside" id="eIA-1n-7cS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="t2y-lN-Ftw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NGf-Hc-ypy"/>
+                    <connections>
+                        <outlet property="CancelButtonOutlet" destination="RcV-zR-WeM" id="kV1-LA-CMM"/>
+                        <outlet property="PickButtonOutlet" destination="y1Q-jX-Ipw" id="FIb-QX-ZXd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5sg-WI-GFk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4322.3999999999996" y="15.742128935532236"/>
+        </scene>
         <!--Home-->
         <scene sceneID="Zzm-nk-JAb">
             <objects>
@@ -701,6 +739,24 @@ Score</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wre-pe-1yy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="152.80000000000001" y="212.74362818590706"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EdX-ln-00H">
+            <objects>
+                <navigationController storyboardIdentifier="RingingNavigation" automaticallyAdjustsScrollViewInsets="NO" id="ooL-fa-QEo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XM3-5j-oNj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ycb-vv-kXh" kind="relationship" relationship="rootViewController" id="E3o-cz-mHO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIH-eC-vrv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3383.1999999999998" y="15.742128935532236"/>
         </scene>
     </scenes>
     <resources>

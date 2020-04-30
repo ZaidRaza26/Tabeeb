@@ -30,6 +30,8 @@ extension Message: MessageType{
     }
     
     var sentDate: Date {
+       // let dateConverted = Float(timestamp)
+       // return Date(timeIntervalSince1970: TimeInterval(dateConverted))
         return Date(timeIntervalSince1970: timestamp)
     }
     

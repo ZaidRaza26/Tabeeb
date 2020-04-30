@@ -12,6 +12,7 @@ class Conversation: Codable{
     let id : String
     let lastMessage : String
     let timestamp : Double
+    let doctorID : String
     let doctorName : String
     let patientName: String
     

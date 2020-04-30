@@ -31,6 +31,7 @@ class ConsultTableViewCell: UITableViewCell {
     @IBAction func consultTapped(_ sender: Any) {
         let ref = Firestore.firestore().collection("conversations").addDocument(data: ["lastMessage": "Send your first message",
                                                                                        "timestamp": Date().timeIntervalSince1970,
+                                                                                       "doctorID": doctor.id,
                                                                                        "doctorName": doctor.name,
                                                                                        "patientName":CurrentUser.shared.name])
         Firestore.firestore().collection("doctors-patients").document(CurrentUser.shared.id).setData([doctor.id: ref.documentID], merge: true)

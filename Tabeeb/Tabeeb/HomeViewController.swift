@@ -16,14 +16,13 @@ class HomeViewController: UIViewController {
     var arrayOfPacketsToCalculate:[Packet] = []
     
     
-    
-    
     @IBOutlet weak var circularRingOutlet: UICircularProgressRing!
     @IBOutlet weak var takenScore: UILabel!
     @IBOutlet weak var skippedScore: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        videoCallListener()
         getPackets()
         getScore()
         collectionView.delegate = self
@@ -38,6 +37,41 @@ class HomeViewController: UIViewController {
         layout.itemSize = CGSize(width: self.collectionView.bounds.height * 0.83, height: self.collectionView.bounds.height)
         
     }
+    
+    //video call listener
+    func videoCallListener(){
+        Firestore.firestore().collection("videocall").document(CurrentUser.shared.id)
+        .addSnapshotListener { documentSnapshot, error in
+          guard let document = documentSnapshot else {
+            print("Error fetching document: \(error!)")
+            return
+          }
+          guard let data = document.data() else {
+            print("Document data was empty.")
+            return
+          }
+          print("Current data: \(data)")
+                
+                let videocall:VideoCall = try! decode(with: data)
+
+                
+                
+                if let nc = self.storyboard?.instantiateViewController(withIdentifier: "RingingNavigation") as? UINavigationController, let vc = nc.viewControllers.first as? RingingViewController {
+                    vc.videocall = videocall
+                    self.present(nc, animated: true, completion: nil)
+
+                }
+            
+            
+            
+            
+           
+          
+            
+        }
+    }
+    
+    
     
     func getScore(){
     Firestore.firestore().collection("packets").document(CurrentUser.shared.id).collection("packets").addSnapshotListener { (snapshot, error) in

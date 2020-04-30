@@ -10,6 +10,8 @@ import UIKit
 import MessageKit
 import InputBarAccessoryView
 import Firebase
+import OpenTok
+
 
 class ChatViewController: MessagesViewController, MessagesDataSource {
     
@@ -17,6 +19,9 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
     var conversation : Conversation!
     @IBOutlet var chooseBuuton: UIButton!
     var imagePicker = UIImagePickerController()
+    var roomNumber: String?
+    var videocall: VideoCall!
+
     
     
     override public func viewDidLoad() {
@@ -26,6 +31,8 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
         
         configureMessageCollectionView()
         configureMessageInputBar()
+        
+        roomNumber = randomString(length: 5)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -119,6 +126,71 @@ class ChatViewController: MessagesViewController, MessagesDataSource {
         let dateString = message.sentDate.timeAgo(numericDates: true)
         return NSAttributedString(string: dateString, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10), NSAttributedString.Key.foregroundColor: UIColor.darkGray])
     }
+    
+    func randomString(length: Int) -> String {
+      let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+      return String((0..<length).map{ _ in letters.randomElement()! })
+    }
+    
+    
+    
+    
+    func VideoCallingMovedFromViewDidLoad(roomNumber:String, completion: @escaping (VideoCall)->Void){
+        let configuration = URLSessionConfiguration.default
+                  let session = URLSession(configuration: configuration)
+        let url = URL(string: "https://tabeeb26.herokuapp.com/" + "room/" + roomNumber)
+                  let dataTask = session.dataTask(with: url!) {
+                      (data: Data?, response: URLResponse?, error: Error?) in
+
+                      guard error == nil, let _data = data else {
+                          print(error!)
+                          return
+                      }
+
+                      let dict = try! JSONSerialization.jsonObject(with: _data, options: .allowFragments) as? [AnyHashable: Any]
+                    self.videocall = try! decode(with: dict as! [String : Any])
+
+                    //self.videocall.apiKey = dict?["apiKey"] as? String ?? ""
+                    //self.videocall.sessionId = dict?["sessionId"] as? String ?? ""
+                    //self.videocall.token = dict?["token"] as? String ?? ""
+                     //check this later Zaid
+                      //self.connectToAnOpenTokSession()
+                    
+                    
+                    
+                    //adding session details on firebase
+                    // Add a new document in collection "cities"
+                    Firestore.firestore().collection("videocall").document(self.conversation.doctorID).setData([
+                        // Added this line for testing
+                        "caller": CurrentUser.shared.name,
+                        "callEnded": false,
+                        "apiKey": self.videocall.apiKey,
+                        "sessionId": self.videocall.sessionId,
+                        "token": self.videocall.token
+                    ]) { err in
+                        if let err = err {
+                            print("Error writing document: \(err)")
+                        } else {
+                            print("Document successfully written!")
+                        }
+                    }
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    completion(self.videocall)
+
+                  }
+                  dataTask.resume()
+                  session.finishTasksAndInvalidate()
+    }
+
+    
     
 }
 
@@ -242,11 +314,21 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
     }
     
     @objc func callButtonTapped(){
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "Video") as? VideoCallViewController {
-        navigationController?.pushViewController(vc, animated: true)
+        VideoCallingMovedFromViewDidLoad(roomNumber: roomNumber!) { (videocall) in
+            DispatchQueue.main.async {
             
+            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "Video") as? VideoCallViewController {
+                vc.videocall = videocall
+                self.navigationController?.pushViewController(vc, animated: true)
+                      
+                  }
+            }
         }
+        
+      
         
     }
     
 }
+
+

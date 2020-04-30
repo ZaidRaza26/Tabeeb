@@ -8,13 +8,9 @@
 
 import UIKit
 import OpenTok
+import Firebase
 
 // Replace with your OpenTok API key
-var kApiKey = "46514172"
-// Replace with your generated session ID
-var kSessionId = "2_MX40NjUxNDE3Mn5-MTU4MTg4NTU2Mzk1MH5XZ1oxSWVwRml3Mk1LZmJlK254cEt4S3h-fg"
-// Replace with your generated token
-var kToken = "T1==cGFydG5lcl9pZD00NjUxNDE3MiZzaWc9MWY2ZjQ3YTc5N2E3ZDZjZjY3ODA3ZDExZDNhYjZmNmUzOGU1ODk1ZDpzZXNzaW9uX2lkPTJfTVg0ME5qVXhOREUzTW41LU1UVTRNVGc0TlRVMk16azFNSDVYWjFveFNXVndSbWwzTWsxTFptSmxLMjU0Y0V0NFMzaC1mZyZjcmVhdGVfdGltZT0xNTgxODg1NjAzJm5vbmNlPTAuMjMyODYxMDgyMDM4MDY0Nzcmcm9sZT1tb2RlcmF0b3ImZXhwaXJlX3RpbWU9MTU4NDQ3NDAwMiZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ=="
 
 
 class VideoCallViewController: UIViewController {
@@ -22,37 +18,22 @@ class VideoCallViewController: UIViewController {
     var session: OTSession?
     var publisher: OTPublisher?
     var subscriber: OTSubscriber?
+    var videocall: VideoCall!
 
+    
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-           let configuration = URLSessionConfiguration.default
-           let session = URLSession(configuration: configuration)
-           let url = URL(string: "https://tabeeb26.herokuapp.com/session")
-           let dataTask = session.dataTask(with: url!) {
-               (data: Data?, response: URLResponse?, error: Error?) in
-
-               guard error == nil, let _data = data else {
-                   print(error!)
-                   return
-               }
-
-               let dict = try! JSONSerialization.jsonObject(with: _data, options: .allowFragments) as? [AnyHashable: Any]
-               kApiKey = dict?["apiKey"] as? String ?? ""
-               kSessionId = dict?["sessionId"] as? String ?? ""
-               kToken = dict?["token"] as? String ?? ""
-               self.connectToAnOpenTokSession()
-           }
-           dataTask.resume()
-           session.finishTasksAndInvalidate()
+        connectToAnOpenTokSession(ksessionId:videocall.sessionId,kToken: videocall.token,kApiKey: videocall.apiKey)
+        
+        
 
     }
     
     
-  func connectToAnOpenTokSession() {
-        session = OTSession(apiKey: kApiKey, sessionId: kSessionId, delegate: self)
+    func connectToAnOpenTokSession(ksessionId:String,kToken:String,kApiKey:String) {
+        session = OTSession(apiKey: kApiKey, sessionId: ksessionId, delegate: self)
         var error: OTError?
         session?.connect(withToken: kToken, error: &error)
         if error != nil {
@@ -125,6 +106,29 @@ extension VideoCallViewController: OTSessionDelegate {
    func session(_ session: OTSession, streamDestroyed stream: OTStream) {
        print("A stream was destroyed in the session.")
    }
+    
+//    func GetSessionIdFromFirestoreOnReceiving(completion: @escaping (String)->Void){
+//        Firestore.firestore().collection("videocall").document(CurrentUser.shared.id)
+//           .addSnapshotListener { documentSnapshot, error in
+//             guard let document = documentSnapshot else {
+//               print("Error fetching document: \(error!)")
+//               return
+//             }
+//             guard let data = document.data() else {
+//               print("Document data was empty.")
+//               return
+//             }
+//             print("Current data: \(data)")
+//            if let sessionId = data["sessionId"] as? String{
+//                completion(sessionId)
+//            }
+//        }
+//    }
+    
+    
+    
+ 
+    
 }
 
 // MARK: - OTPublisherDelegate callbacks
